@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>日语健身房器材 demo</title>
+<title>韩语萌宠零基础 demo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Inter:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
@@ -2871,6 +2871,7 @@ body {
   padding: 10px 12px;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   background: #E6E9EE;
   color: #444764;
@@ -3018,6 +3019,13 @@ body {
 }
 .spec-vocab-explanation-play:active {
   transform: translateY(-50%) scale(0.96);
+}
+.demo-beginner-romaji {
+  margin: 0 0 4px;
+  color: #8A8FA8;
+  font-size: 13px;
+  line-height: 1.25;
+  letter-spacing: 0.2px;
 }
 .spec-typing-stack {
   gap: 12px;
@@ -6503,7 +6511,7 @@ body.demo-body {
   <main id="entryView" class="demo-entry">
     <div>
       <h1 class="demo-entry-title">韩语 - 谈论萌宠</h1>
-      <p class="demo-entry-subtitle">Unit 1 - 猫咪品种与特点</p>
+      <p class="demo-entry-subtitle">Unit 1 - 毛发、尾巴与耳朵</p>
     </div>
     <div class="demo-lesson-entry-list" aria-label="课程入口">
       <button class="demo-lesson-card" type="button" data-level="1">
@@ -6903,6 +6911,40 @@ function _specEscape(value) {
   return String(value ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 }
 const JP_ROMAJI = {
+  "털": "teol",
+  "짧은": "jjalbeun",
+  "긴": "gin",
+  "짧은 털": "jjalbeun teol",
+  "긴 털": "gin teol",
+  "짧은 털을": "jjalbeun teoreul",
+  "긴 털을": "gin teoreul",
+  "털을": "teoreul",
+  "꼬리": "kkori",
+  "풍성한": "pungseonghan",
+  "줄무늬": "julmunui",
+  "풍성한 꼬리": "pungseonghan kkori",
+  "줄무늬 꼬리": "julmunui kkori",
+  "풍성한 꼬리를": "pungseonghan kkorireul",
+  "줄무늬 꼬리를": "julmunui kkorireul",
+  "꼬리를": "kkorireul",
+  "귀": "gwi",
+  "처진": "cheojin",
+  "큰": "keun",
+  "처진 귀": "cheojin gwi",
+  "큰 귀": "keun gwi",
+  "처진 귀를": "cheojin gwireul",
+  "큰 귀를": "keun gwireul",
+  "귀를": "gwireul",
+  "가지고": "gajigo",
+  "있어요": "isseoyo",
+  "안녕하세요": "annyeonghaseyo",
+  "가지고 있어요": "gajigo isseoyo",
+  "짧은 털을 가지고 있어요.": "jjalbeun teoreul gajigo isseoyo",
+  "긴 털을 가지고 있어요.": "gin teoreul gajigo isseoyo",
+  "풍성한 꼬리를 가지고 있어요.": "pungseonghan kkorireul gajigo isseoyo",
+  "줄무늬 꼬리를 가지고 있어요.": "julmunui kkorireul gajigo isseoyo",
+  "처진 귀를 가지고 있어요.": "cheojin gwireul gajigo isseoyo",
+  "큰 귀를 가지고 있어요.": "keun gwireul gajigo isseoyo",
   "숏헤어": "syoteuheeo",
   "숏헤어를": "syoteuheoreul",
   "키워요": "kiwoyo",
@@ -6944,6 +6986,40 @@ const JP_ROMAJI = {
   "어 주세요": "eo juseyo"
 };
 const JP_AUDIO_KEYS = {
+  "털": "kr-teol",
+  "짧은": "kr-jjalbeun",
+  "긴": "kr-gin",
+  "짧은 털": "kr-jjalbeun-teol",
+  "긴 털": "kr-gin-teol",
+  "짧은 털을": "kr-jjalbeun-teoreul",
+  "긴 털을": "kr-gin-teoreul",
+  "털을": "kr-teoreul",
+  "꼬리": "kr-kkori",
+  "풍성한": "kr-pungseonghan",
+  "줄무늬": "kr-julmunui",
+  "풍성한 꼬리": "kr-pungseonghan-kkori",
+  "줄무늬 꼬리": "kr-julmunui-kkori",
+  "풍성한 꼬리를": "kr-pungseonghan-kkorireul",
+  "줄무늬 꼬리를": "kr-julmunui-kkorireul",
+  "꼬리를": "kr-kkorireul",
+  "귀": "kr-gwi",
+  "처진": "kr-cheojin",
+  "큰": "kr-keun",
+  "처진 귀": "kr-cheojin-gwi",
+  "큰 귀": "kr-keun-gwi",
+  "처진 귀를": "kr-cheojin-gwireul",
+  "큰 귀를": "kr-keun-gwireul",
+  "귀를": "kr-gwireul",
+  "가지고": "kr-gajigo",
+  "있어요": "kr-isseoyo",
+  "안녕하세요": "kr-annyeonghaseyo",
+  "가지고 있어요": "kr-gajigo-isseoyo",
+  "짧은 털을 가지고 있어요.": "kr-jjalbeun-teoreul-gajigo-isseoyo",
+  "긴 털을 가지고 있어요.": "kr-gin-teoreul-gajigo-isseoyo",
+  "풍성한 꼬리를 가지고 있어요.": "kr-pungseonghan-kkorireul-gajigo-isseoyo",
+  "줄무늬 꼬리를 가지고 있어요.": "kr-julmunui-kkorireul-gajigo-isseoyo",
+  "처진 귀를 가지고 있어요.": "kr-cheojin-gwireul-gajigo-isseoyo",
+  "큰 귀를 가지고 있어요.": "kr-keun-gwireul-gajigo-isseoyo",
   "숏헤어를 키워요.": "kr-syoteuheoreul-kiwoyo",
   "브리티시 숏헤어": "kr-beuritisi-syoteuheeo",
   "아메리칸 숏헤어": "kr-amerikan-syoteuheeo",
@@ -7953,13 +8029,14 @@ function renderCurrentStep() {
   }
   RENDERERS[step.type](stage, step);
 }
-function imageScene(data, labelText, extraClass = '') {
-  return `<section class="spec-word-card spec-context-card demo-image-card ${extraClass}" aria-label="例句图片">${_specAudioHTML(data.sentence || data.fullPhrase)}<div class="spec-word-art">${_specImageHTML(data.image)}</div><div class="spec-context-example"><div class="spec-context-example-text">${labelText}</div></div></section>`;
+function imageScene(data, labelText, extraClass = '', showRomaji = true) {
+  const target = data.sentence || data.fullPhrase;
+  return `<section class="spec-word-card spec-context-card demo-image-card ${extraClass}" aria-label="例句图片">${_specAudioHTML(target)}<div class="spec-word-art">${_specImageHTML(data.image)}</div><div class="spec-context-example">${showRomaji && JP_ROMAJI[target] ? `<div class="demo-beginner-romaji">${_specEscape(JP_ROMAJI[target])}</div>` : ''}<div class="spec-context-example-text">${labelText}</div></div></section>`;
 }
 function _specVocabExplanationHTML(data) {
   if (!data.wordExplanation) return '';
   const audioText = _specEscape(data.wordAudio || data.phrase || '');
-  return `<section class="spec-vocab-explanation" aria-label="语音讲解"><div class="spec-vocab-explanation-tab">语音讲解</div><div class="spec-vocab-explanation-panel"><p class="spec-vocab-explanation-text">${data.wordExplanation}</p><button class="spec-vocab-explanation-play" type="button" data-spec-say="${audioText}" aria-label="播放目标单词"></button></div></section>`;
+  return `<section class="spec-vocab-explanation" aria-label="单词讲解"><div class="spec-vocab-explanation-tab">单词讲解</div><div class="spec-vocab-explanation-panel"><p class="spec-vocab-explanation-text">${data.wordExplanation}</p><button class="spec-vocab-explanation-play" type="button" data-spec-say="${audioText}" aria-label="播放目标内容"></button></div></section>`;
 }
 function renderContextMeaning(container, data) {
   let answerState = 'idle';
@@ -7998,7 +8075,8 @@ function renderSpelling(container, data) {
     const done = allFilled && completeReady;
     const poolHTML = optionItems.map(item => _specPillHTML(item.label, item.index, used.has(item.index) || wrongIndex === item.index ? 'hollow' : '')).join('');
     const slotHTML = `<div class="spec-spelling-line">${_specAudioHTML(data.fullPhrase)}<div class="spec-spelling-slots">${data.chunks.map((chunk,index) => { const slot = slotStates[index]; return `<div class="spec-spelling-slot ${!slot && index === current ? 'active' : ''}">${slot ? `<div class="spec-slot-token ${slot.state}">${_specJPDisplayHTML(slot.text, 'label')}</div>` : '<div class="spec-spelling-slot-line"></div>'}</div>`; }).join('')}</div></div>`;
-    _specShell(container, { exerciseId: data.id, progress: stepProgress(), showContinue: done, sceneHTML: imageScene({ ...data, sentence: data.fullPhrase }, _specEscape(data.translation), 'demo-vocab-card'), bodyHTML: `<div class="spec-main-stack"><p class="spec-stem">请翻译：</p>${done ? _specCompleteSentenceHTML(data.fullPhrase, data.gloss || {}, true, data.lookupUnits || []) : slotHTML}${allFilled ? '' : `<div class="spec-option-pool">${poolHTML}</div>`}</div>` });
+    const explanationHTML = done ? _specVocabExplanationHTML({ ...data, phrase: data.fullPhrase, wordAudio: data.fullPhrase }) : '';
+    _specShell(container, { exerciseId: data.id, progress: stepProgress(), showContinue: done, sceneHTML: imageScene({ ...data, sentence: data.fullPhrase }, _specEscape(data.translation), 'demo-vocab-card', false), bodyHTML: `<div class="spec-main-stack"><p class="spec-stem">请翻译：</p>${done ? _specCompleteSentenceHTML(data.fullPhrase, data.gloss || {}, true, data.lookupUnits || []) : slotHTML}${allFilled ? '' : `<div class="spec-option-pool">${poolHTML}</div>`}${explanationHTML}</div>` });
     if (!initialFullPlayed) {
       initialFullPlayed = true;
       _playSoon(data.fullPhrase, 420);
@@ -8593,7 +8671,8 @@ function renderTwoOption(container, data) {
       return `<div class="spec-single-translation-row"><span class="spec-single-translation-fixed">${start}</span><div class="spec-slot ${slot ? '' : 'active'}">${slot ? `<div class="spec-slot-answer"><div class="spec-slot-token ${slot.state}">${_specEscape(slot.text)}</div></div>` : `<div class="spec-slot-hint">${_specEscape(active?.zh || '')}</div><div class="spec-slot-line"></div>`}</div><span class="spec-single-translation-fixed">${end}</span></div>`;
     };
     const completedHTML = `<div class="spec-two-option-complete-flow">${_specCompleteSentenceHTML(data.fullSentence, data.gloss || {}, true, data.lookupUnits || [])}${explanationHTML}</div>`;
-    _specShell(container, { exerciseId: data.id, progress: stepProgress(), showContinue: done, bodyHTML: `<div class="spec-main-stack">${_specTopicCardHTML(promptHTML, false, true)}${done ? completedHTML : sentenceSlotHTML()}${allFilled ? '' : `<div class="spec-choice-list">${optionsHTML}</div>`}</div>` });
+    const sceneHTML = data.image ? imageScene({ ...data, sentence: data.fullSentence }, _specEscape(data.prompt || ''), 'demo-vocab-card') : '';
+    _specShell(container, { exerciseId: data.id, progress: stepProgress(), showContinue: done, sceneHTML, bodyHTML: `<div class="spec-main-stack">${_specTopicCardHTML(promptHTML, false, true)}${done ? completedHTML : sentenceSlotHTML()}${allFilled ? '' : `<div class="spec-choice-list">${optionsHTML}</div>`}</div>` });
     if (done && !fullPlayed) {
       fullPlayed = true;
       _playSoon(data.fullSentence, 300);
@@ -9171,6 +9250,7 @@ function renderRegular9876Oral(container, data) {
   };
   const topicHTML = () => _specTopicCardHTML(_specChineseLookupHTML(data.promptSegments || []), false, true);
   const completeSentenceHTML = () => _specCompleteSentenceHTML(data.fullSentence, data.gloss || {}, true, data.lookupUnits || []);
+  const oralExplanationHTML = () => _specGrammarExplanationHTML(data.explanation);
   const sentenceClozeTokens = () => {
     if (!sentenceClozeWords) return [];
     const source = String(data.fullSentence || '');
@@ -9251,7 +9331,7 @@ function renderRegular9876Oral(container, data) {
     if (recordState === 'scoring') {
       return `<div class="spec-repeat-record-area spec-repeat-record-scoring"><div class="spec-record-scoring-spinner" aria-label="评分中"></div></div>`;
     }
-    if (recordState === 'done') return `<div class="spec-record-panel done"><p class="demo-record-feedback-title">口语回答反馈：</p>${recordSentenceFeedbackHTML()}</div>`;
+    if (recordState === 'done') return `<div class="spec-record-panel done"><p class="demo-record-feedback-title">口语回答反馈：</p>${recordSentenceFeedbackHTML()}</div>${oralExplanationHTML()}`;
     return `<div class="spec-repeat-record-area"><div class="spec-repeat-record-zone"><button class="spec-record-main spec-repeat-record-main" type="button" data-regular-oral-record="start" aria-label="开始录音"><img src="${SPEC_ASSETS.recordStart}" alt=""></button><div class="spec-record-prompt">点击录音</div></div></div>`;
   };
   const recordBottomHTML = () => {
@@ -9335,8 +9415,8 @@ function renderRegular9876Oral(container, data) {
   const renderSelect = () => {
     const correct = submitted && allCorrect();
     const states = visibleStates().map(slot => slot && submitted && slot.state === 'wrong' && selectShakeWrong ? { ...slot, state: 'wrong shake' } : slot);
-    const completeHTML = correct && completeReady ? completeSentenceHTML() : '';
-    const slotHTML = _specSlotsHTML(data.chunks, states, Math.max(0,currentSlot()), { showHints: false, canRemove: true, submitted, endPunctuation: data.fixedTail ? ',' : '' });
+    const completeHTML = correct && completeReady ? `<div class="spec-two-option-complete-flow">${completeSentenceHTML()}${oralExplanationHTML()}</div>` : '';
+    const slotHTML = _specSlotsHTML(data.chunks, states, Math.max(0,currentSlot()), { showHints: Boolean(data.showChunkHints), canRemove: true, submitted, endPunctuation: data.fixedTail ? ',' : '' });
     const clozeHTML = data.fixedTail
       ? `<div class="spec-regular-cloze-row">${slotHTML}<span class="spec-regular-cloze-fixed">${_specEscape(data.fixedTail)}</span></div>`
       : sentenceClozeWordIndexToSlot ? sentenceClozeHTML(states) : slotHTML;
@@ -12052,6 +12132,33 @@ const V10_GLOSS = {
 };
 
 Object.assign(V10_GLOSS, {
+  "털": "毛；毛发",
+  "짧은": "短的",
+  "긴": "长的",
+  "짧은 털": "短毛",
+  "긴 털": "长毛",
+  "짧은 털을": "短毛；을通常不单独翻译",
+  "긴 털을": "长毛；을通常不单独翻译",
+  "털을": "毛",
+  "꼬리": "尾巴",
+  "풍성한": "蓬松丰满的",
+  "줄무늬": "条纹",
+  "풍성한 꼬리": "蓬松的尾巴",
+  "줄무늬 꼬리": "条纹尾巴",
+  "풍성한 꼬리를": "蓬松的尾巴；를通常不单独翻译",
+  "줄무늬 꼬리를": "条纹尾巴；를通常不单独翻译",
+  "꼬리를": "尾巴",
+  "귀": "耳朵",
+  "처진": "下垂的",
+  "큰": "大的",
+  "처진 귀": "垂耳",
+  "큰 귀": "大耳朵",
+  "처진 귀를": "垂耳；를通常不单独翻译",
+  "큰 귀를": "大耳朵；를通常不单独翻译",
+  "귀를": "耳朵",
+  "가지고": "拥有；带有",
+  "있어요": "有；存在",
+  "가지고 있어요": "有；拥有",
   "숏헤어": "短毛猫",
   "숏헤어를": "短毛猫（宾格）",
   "키워요": "养；饲养",
@@ -12116,6 +12223,18 @@ const IMG = {
   krPetLargeMaineCoon: "assets/images/kr-pets-level1/q08-large-maine-coon.jpg",
   krPetMaineCoonKitten: "assets/images/kr-pets-level1/q09-maine-coon-kitten.jpg"
 };
+
+Object.assign(IMG, {
+  krBeginnerFur: "assets/images/kr-beginner-level1/q01-fur.jpg",
+  krBeginnerShortFur: "assets/images/kr-beginner-level1/q02-short-fur.jpg",
+  krBeginnerLongFur: "assets/images/kr-beginner-level1/q03-long-fur.jpg",
+  krBeginnerTail: "assets/images/kr-beginner-level1/q04-tail.jpg",
+  krBeginnerBushyTail: "assets/images/kr-beginner-level1/q05-bushy-tail.jpg",
+  krBeginnerStripedTail: "assets/images/kr-beginner-level1/q06-striped-tail.jpg",
+  krBeginnerEars: "assets/images/kr-beginner-level1/q07-ears-card-v2.jpg",
+  krBeginnerFloppyEars: "assets/images/kr-beginner-level1/q08-floppy-ears.jpg",
+  krBeginnerPerkedEars: "assets/images/kr-beginner-level1/q09-big-ears-card-v3.jpg"
+});
 
 function topicSegmentsFromText(text) {
   return String(text || '').split('/').map(part => ({ text: part }));
@@ -12552,7 +12671,42 @@ const V11_LEVEL4_CORE = [
   }
 ];
 
-const COURSE_V10_LEVEL_1 = [
+function beginnerWordStep(id, number, word, image, correct, distractors, explanation) {
+  return {
+    id, type: "contextMeaning", section: `第1关 · 新单词 · 题${number}`,
+    phrase: word, image, sentence: word, options: [correct, distractors[0]], correct,
+    wordExplanation: explanation, wordAudio: word
+  };
+}
+function beginnerPhraseStep(id, number, phrase, image, translation, chunks, options, explanation) {
+  return {
+    id, type: "spelling", section: `第1关 · 新词组 · 题${number}`,
+    image, fullPhrase: phrase, translation, gloss: V10_GLOSS,
+    lookupUnits: chunks, chunks, options: chunks, wordExplanation: explanation
+  };
+}
+function beginnerSentenceStep(id, number, phraseWithParticle, alternatePhrase, sentence, image, translation, explanation) {
+  const objectZh = translation.replace(/^它有(?:一条|一双)?/, "");
+  return {
+    id, type: "twoOption", section: `第1关 · 新句子 · 题${number}`,
+    image, prompt: translation,
+    promptSegments: topicLookupSegments(["它", "有", objectZh], ["（省略）", "가지고 있어요", phraseWithParticle], { 2: "。" }),
+    fullSentence: sentence, gloss: V10_GLOSS,
+    lookupUnits: phraseWithParticle.includes(" ")
+      ? [...phraseWithParticle.split(" "), "가지고", "있어요"]
+      : [phraseWithParticle, "가지고", "있어요"],
+    groups: [
+      { zh: objectZh, options: [phraseWithParticle, alternatePhrase], correct: phraseWithParticle },
+      { zh: "有", options: ["가지고 있어요", "안녕하세요"], correct: "가지고 있어요" }
+    ],
+    explanation: { tab: "句子语法讲解", blocks: [{ type: "body", parts: explanation }] }
+  };
+}
+const BEGINNER_SUBJECT_NOTE = [
+  { text: "3. 这句话字面上是“有……”，没有说是谁有。韩语常省略上下文中明确的主语，因此中文补出“它”。" }
+];
+
+const COURSE_V10_LEVEL_1_LEGACY = [
   {
     id: "kr_l1_q1_shorthair_meaning",
     type: "contextMeaning",
@@ -12771,6 +12925,65 @@ const COURSE_V10_LEVEL_1 = [
     [{ zh: "", answer: "아기" }, { zh: "", answer: "메인쿤은" }, { zh: "", answer: "놀 수 있는" }, { zh: "", answer: "공간이" }, { zh: "", answer: "필요해요" }],
     ["필요해요", "공간이", "메인쿤은", "아기", "놀 수 있는"]
   )
+];
+
+const BEGINNER_SENTENCE_EXPLANATIONS = {
+  shortFur: { tab: "句子语法讲解", blocks: [{ type: "body", parts: [
+    { text: "1. " }, { text: "짧은 털", color: "orange" }, { text: "表示“短毛”。放进这句话后变成" }, { text: "짧은 털을", color: "orange" }, { text: "，末尾多了을。\n" },
+    { text: "2. " }, { text: "을/를", color: "orange" }, { text: "是放在名词后面的助词，通常不单独翻译。\n" },
+    { text: "3. 这句话字面上是“有短毛”，没有说是谁有。韩语常省略上下文中明确的主语，因此中文补出“它”。" }
+  ] }] },
+  longFur: { tab: "句子语法讲解", blocks: [{ type: "body", parts: [
+    { text: "1. " }, { text: "긴 털", color: "orange" }, { text: "表示“长毛”。放进句子后变成" }, { text: "긴 털을", color: "orange" }, { text: "；末尾的을通常不单独翻译。\n" },
+    { text: "2. 这句话字面上是“有长毛”，原句省略了主语；中文补出“它”。" }
+  ] }] },
+  bushyTail: { tab: "句子语法讲解", blocks: [{ type: "body", parts: [
+    { text: "1. " }, { text: "풍성한 꼬리", color: "orange" }, { text: "表示“蓬松的尾巴”。放进句子后变成" }, { text: "풍성한 꼬리를", color: "orange" }, { text: "；末尾的를通常不单独翻译。\n" },
+    { text: "2. 这句话字面上是“有蓬松的尾巴”，原句省略了主语；中文补出“它”。" }
+  ] }] },
+  stripedTail: { tab: "句子语法讲解", blocks: [{ type: "body", parts: [
+    { text: "1. " }, { text: "줄무늬 꼬리", color: "orange" }, { text: "表示“条纹尾巴”。放进句子后变成" }, { text: "줄무늬 꼬리를", color: "orange" }, { text: "；末尾的를通常不单独翻译。\n" },
+    { text: "2. 这句话字面上是“有条纹尾巴”，原句省略了主语；中文补出“它”。" }
+  ] }] },
+  floppyEars: { tab: "句子语法讲解", blocks: [{ type: "body", parts: [
+    { text: "1. " }, { text: "처진 귀", color: "orange" }, { text: "表示“垂耳”。放进句子后变成" }, { text: "처진 귀를", color: "orange" }, { text: "；末尾的를通常不单独翻译。\n" },
+    { text: "2. 这句话字面上是“有垂耳”，原句省略了主语，也没有单独说“一双”；中文自然补成“它有一双垂耳”。" }
+  ] }] },
+  bigEars: { tab: "句子语法讲解", blocks: [{ type: "body", parts: [
+    { text: "1. " }, { text: "큰 귀", color: "orange" }, { text: "表示“大耳朵”。放进句子后变成" }, { text: "큰 귀를", color: "orange" }, { text: "；末尾的를通常不单独翻译。\n" },
+    { text: "2. 这句话字面上是“有大耳朵”，原句省略了主语；中文补出“它”。" }
+  ] }] }
+};
+
+const COURSE_V10_LEVEL_1 = [
+  beginnerWordStep("kr0_q01_teol", 1, "털", IMG.krBeginnerFur, "毛；毛发", ["尾巴", "耳朵"],
+    "<strong>털</strong>通常指动物身上的毛，也可以指人体除头发以外的体毛。"),
+  beginnerPhraseStep("kr0_q02_short_fur", 2, "짧은 털", IMG.krBeginnerShortFur, "短毛", ["짧은", "털"], ["털", "짧은"],
+    "1. <strong>짧은</strong>表示“短的”，放在<strong>털</strong>前面，用来说明毛的长度。<br>2. 韩语中，描述特点的词通常放在名词前面：짧은（短的）＋털（毛）＝短毛。"),
+  beginnerPhraseStep("kr0_q03_long_fur", 3, "긴 털", IMG.krBeginnerLongFur, "长毛", ["긴", "털"], ["털", "긴", "짧은"],
+    "1. <strong>긴</strong>表示“长的”，放在名词前面说明长度。<br>2. <strong>긴 털</strong>指动物身上较长的毛，也就是“长毛”。"),
+
+  beginnerWordStep("kr0_q04_kkori", 4, "꼬리", IMG.krBeginnerTail, "尾巴", ["毛；毛发", "耳朵"],
+    "<strong>꼬리</strong>通常指动物的尾巴。"),
+  beginnerPhraseStep("kr0_q05_bushy_tail", 5, "풍성한 꼬리", IMG.krBeginnerBushyTail, "蓬松的尾巴", ["풍성한", "꼬리"], ["꼬리", "풍성한", "털"],
+    "1. <strong>풍성한</strong>表示毛发等看起来“浓密、丰满”。<br>2. <strong>풍성한 꼬리</strong>不是说尾巴本身很大，而是说尾巴上的毛很多，看起来蓬松丰满。"),
+  beginnerPhraseStep("kr0_q06_striped_tail", 6, "줄무늬 꼬리", IMG.krBeginnerStripedTail, "条纹尾巴", ["줄무늬", "꼬리"], ["꼬리", "줄무늬", "풍성한"],
+    "1. <strong>줄무늬</strong>表示由一条条线组成的“条纹、条纹图案”。<br>2. 줄무늬可以直接放在名词前面：줄무늬（条纹）＋꼬리（尾巴）＝条纹尾巴。"),
+
+  beginnerWordStep("kr0_q07_gwi", 7, "귀", IMG.krBeginnerEars, "耳朵", ["尾巴", "毛；毛发"],
+    "韩语名词通常不会像汉语一样通过“一只、一双”体现数量。因此，<strong>귀</strong>根据上下文既可以理解为“一只耳朵”，也可以泛指“两只耳朵”。"),
+  beginnerPhraseStep("kr0_q08_floppy_ears", 8, "처진 귀", IMG.krBeginnerFloppyEars, "垂耳", ["처진", "귀"], ["귀", "처진", "꼬리"],
+    "1. <strong>처진</strong>表示物体向下垂落的状态。<br>2. <strong>처진 귀</strong>指向下垂着的耳朵，也就是“垂耳”。"),
+  beginnerPhraseStep("kr0_q09_big_ears", 9, "큰 귀", IMG.krBeginnerPerkedEars, "大耳朵", ["큰", "귀"], ["귀", "큰", "처진"],
+    "<strong>큰</strong>表示“大、大的”，放在<strong>귀</strong>前面：큰 귀＝大耳朵。"),
+
+  Object.assign(beginnerSentenceStep("kr0_q10_short_fur_sentence", 10, "짧은 털을", "귀", "짧은 털을 가지고 있어요.", null, "它有短毛", BEGINNER_SENTENCE_EXPLANATIONS.shortFur.blocks[0].parts), { image: null }),
+  Object.assign(beginnerSentenceStep("kr0_q11_bushy_tail_sentence", 11, "풍성한 꼬리를", "털", "풍성한 꼬리를 가지고 있어요.", null, "它有一条蓬松的尾巴", BEGINNER_SENTENCE_EXPLANATIONS.bushyTail.blocks[0].parts), { image: null }),
+  Object.assign(beginnerSentenceStep("kr0_q12_floppy_ears_sentence", 12, "처진 귀를", "꼬리", "처진 귀를 가지고 있어요.", null, "它有一双垂耳", BEGINNER_SENTENCE_EXPLANATIONS.floppyEars.blocks[0].parts), { image: null }),
+
+  Object.assign(regular9876OralStep("kr0_q13_long_fur_oral", "第1关 · 口翻 · 题13", topicLookupSegments(["它", "有", "长毛"], ["（省略）", "가지고 있어요", "긴 털을"], { 2: "。" }), "긴 털을 가지고 있어요.", [{ zh: "长毛", answer: "긴 털을" }, { zh: "有", answer: "가지고 있어요" }], ["긴 털을", "가지고 있어요"]), { showChunkHints: true, lookupUnits: ["긴", "털을", "가지고", "있어요"], explanation: BEGINNER_SENTENCE_EXPLANATIONS.longFur }),
+  Object.assign(regular9876OralStep("kr0_q14_striped_tail_oral", "第1关 · 口翻 · 题14", topicLookupSegments(["它", "有", "一条带条纹的尾巴"], ["（省略）", "가지고 있어요", "줄무늬 꼬리를"], { 2: "。" }), "줄무늬 꼬리를 가지고 있어요.", [{ zh: "带条纹的尾巴", answer: "줄무늬 꼬리를" }, { zh: "有", answer: "가지고 있어요" }], ["줄무늬 꼬리를", "가지고 있어요"]), { showChunkHints: true, lookupUnits: ["줄무늬", "꼬리를", "가지고", "있어요"], explanation: BEGINNER_SENTENCE_EXPLANATIONS.stripedTail }),
+  Object.assign(regular9876OralStep("kr0_q15_big_ears_oral", "第1关 · 口翻 · 题15", topicLookupSegments(["它", "有", "一双大耳朵"], ["（省略）", "가지고 있어요", "큰 귀를"], { 2: "。" }), "큰 귀를 가지고 있어요.", [{ zh: "大耳朵", answer: "큰 귀를" }, { zh: "有", answer: "가지고 있어요" }], ["큰 귀를", "가지고 있어요"]), { showChunkHints: true, lookupUnits: ["큰", "귀를", "가지고", "있어요"], explanation: BEGINNER_SENTENCE_EXPLANATIONS.bigEars })
 ];
 
 const COURSE_V10_LEVEL_2 = [
