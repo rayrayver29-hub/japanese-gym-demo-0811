@@ -12620,8 +12620,7 @@ const COURSE_V10_LEVEL_1 = [
     image: IMG.jpDateIkimasu,
     sentence: "行きます",
     options: ["去", "喝"],
-    correct: "去",
-    explanation: { html: "<strong>行きます</strong>表示“去”，可以表达去某个地方或参加某项活动。" }
+    correct: "去"
   },
   {
     id: "jp_date_l1_q2_movie_spelling",
@@ -12634,7 +12633,7 @@ const COURSE_V10_LEVEL_1 = [
     lookupUnits: ["映画に", "行きます"],
     chunks: ["映画に", "行きます"],
     options: ["映画に", "行きます"],
-    explanation: { html: "<strong>映画</strong>是“电影”。<strong>に</strong>放在要去的地方或参加的活动后面。<br><br>结构：地方或活动＋に＋行きます" }
+    explanation: { html: "<strong>映画</strong>是“电影”。<strong>に</strong>是助词，放在要去的地方或参加的活动后面，是一种固定搭配。<br><br>结构：地方或活动＋に＋行きます" }
   },
   {
     id: "jp_date_l1_q3_park_spelling",
@@ -12646,8 +12645,7 @@ const COURSE_V10_LEVEL_1 = [
     gloss: V10_GLOSS,
     lookupUnits: ["公園に", "行きます"],
     chunks: ["公園に", "行きます"],
-    options: ["公園に", "行きます"],
-    explanation: { html: "<strong>公園</strong>是“公园”。<strong>公園に行きます</strong>表示“去公园”。" }
+    options: ["公園に", "行きます"]
   },
   {
     id: "jp_date_l1_q4_nomimasu_meaning",
@@ -12657,8 +12655,7 @@ const COURSE_V10_LEVEL_1 = [
     image: IMG.jpDateNomimasu,
     sentence: "飲みます",
     options: ["喝", "见面"],
-    correct: "喝",
-    explanation: { html: "<strong>飲みます</strong>表示“喝”，可以表达喝茶、咖啡或其他饮品。" }
+    correct: "喝"
   },
   {
     id: "jp_date_l1_q5_tea_spelling",
@@ -12671,7 +12668,7 @@ const COURSE_V10_LEVEL_1 = [
     lookupUnits: ["お茶を", "飲みます"],
     chunks: ["お茶を", "飲みます"],
     options: ["お茶を", "飲みます"],
-    explanation: { html: "<strong>お茶</strong>是“茶”。<strong>を</strong>放在动作对象后面，表示喝的是什么。<br><br>结构：饮品＋を＋飲みます" }
+    explanation: { html: "<strong>お茶</strong>是“茶”。を是搭配动作的助词，放在动词之前，名词之后。口语中也可以省略を，语气会更加放松随性。" }
   },
   {
     id: "jp_date_l1_q6_one_drink_spelling",
@@ -12684,7 +12681,7 @@ const COURSE_V10_LEVEL_1 = [
     lookupUnits: ["一杯", "飲みます"],
     chunks: ["一杯", "飲みます"],
     options: ["一杯", "飲みます"],
-    explanation: { html: "<strong>一杯</strong>表示“一杯”。<strong>一杯飲みます</strong>可以表示“喝一杯”。" }
+    explanation: { html: "日语里动词常常放在句子的末尾，这里并不是说一杯喝的，而是说喝一杯。日语里说“喝一杯”，大概率就是说喝一杯酒。" }
   },
   {
     id: "jp_date_l1_q7_aimasu_meaning",
@@ -12694,8 +12691,7 @@ const COURSE_V10_LEVEL_1 = [
     image: IMG.jpDateAimasu,
     sentence: "会います",
     options: ["见面", "去"],
-    correct: "见面",
-    explanation: { html: "<strong>会います</strong>表示“见面”，用来表达和某人碰面。" }
+    correct: "见面"
   },
   {
     id: "jp_date_l1_q8_weekend_spelling",
@@ -12708,7 +12704,7 @@ const COURSE_V10_LEVEL_1 = [
     lookupUnits: ["週末に", "会います"],
     chunks: ["週末に", "会います"],
     options: ["週末に", "会います"],
-    explanation: { html: "<strong>週末</strong>是“周末”。时间后的<strong>に</strong>表示动作发生的时间。<br><br>结构：时间＋に＋会います" }
+    explanation: { html: "<strong>週末</strong>是“周末”。<strong>に</strong>是助词，还可以放在时间后面，是一种固定搭配。<br><br>结构：时间＋に＋会います" }
   },
   {
     id: "jp_date_l1_q9_cafe_spelling",
@@ -12721,7 +12717,7 @@ const COURSE_V10_LEVEL_1 = [
     lookupUnits: ["カフェで", "会います"],
     chunks: ["カフェで", "会います"],
     options: ["カフェで", "会います"],
-    explanation: { html: "<strong>カフェ</strong>是“咖啡馆”。<strong>で</strong>放在动作发生的地点后面。<br><br>结构：见面地点＋で＋会います" }
+    explanation: { html: "<strong>カフェ</strong>是“咖啡馆”。<strong>で</strong>是助词，放在动作发生的地点后面，是一种固定搭配。<br><br>结构：见面地点＋で＋会います" }
   },
   {
     id: "jp_date_l1_q10_movie_invite",
@@ -12734,10 +12730,10 @@ const COURSE_V10_LEVEL_1 = [
     lookupUnits: ["映画", "に", "行きませんか"],
     groups: [
       { zh: "电影", options: ["映画", "公園"], correct: "映画" },
-      { zh: "表示去往的活动", options: ["に", "カフェ"], correct: "に" },
+      { zh: "助词，放在活动后面", options: ["に", "カフェ"], correct: "に" },
       { zh: "要不要一起去", options: ["行きませんか", "飲みませんか"], correct: "行きませんか" }
     ],
-    explanation: { html: "<strong>行きます</strong>表示“去”，是在说明要去做某件事。<strong>行きませんか</strong>表示“要不要一起去？”，是在礼貌地邀请对方。" }
+    explanation: { html: "<strong>行きます</strong>表示“去”，<strong>行きませんか</strong>表示“要不要一起去？”。动词后面的ます变为ませんか可以用来表示礼貌的邀请，即“要不要......？”" }
   },
   {
     id: "jp_date_l1_q11_park_invite",
@@ -12750,10 +12746,9 @@ const COURSE_V10_LEVEL_1 = [
     lookupUnits: ["公園", "に", "行きませんか"],
     groups: [
       { zh: "公园", options: ["公園", "映画"], correct: "公園" },
-      { zh: "表示去往的地点", options: ["に", "お茶"], correct: "に" },
+      { zh: "助词，放在地点后面", options: ["に", "お茶"], correct: "に" },
       { zh: "要不要一起去", options: ["行きませんか", "会いませんか"], correct: "行きませんか" }
-    ],
-    explanation: { html: "<strong>行きます</strong>表示“去”，是在说明要去做某件事。<strong>行きませんか</strong>表示“要不要一起去？”，是在礼貌地邀请对方。" }
+    ]
   },
   {
     id: "jp_date_l1_q12_tea_invite",
@@ -12766,10 +12761,10 @@ const COURSE_V10_LEVEL_1 = [
     lookupUnits: ["お茶", "を", "飲みませんか"],
     groups: [
       { zh: "茶", options: ["お茶", "一杯"], correct: "お茶" },
-      { zh: "表示喝的内容", options: ["を", "週末"], correct: "を" },
+      { zh: "搭配动作的助词，放在名词后", options: ["を", "週末"], correct: "を" },
       { zh: "要不要一起喝", options: ["飲みませんか", "行きませんか"], correct: "飲みませんか" }
     ],
-    explanation: { html: "<strong>飲みます</strong>表示“喝”，是在说明要喝东西。<strong>飲みませんか</strong>表示“要不要一起喝？”，是在礼貌地邀请对方。" }
+    explanation: { html: "<strong>飲みます</strong>表示“喝”，<strong>飲みませんか</strong>表示“要不要一起喝？”。动词后面的ます变为ませんか可以用来表示礼貌的邀请，即“要不要......？”" }
   },
   regular9876OralStep(
     "jp_date_l1_q13_oral_one_drink",
@@ -12777,26 +12772,24 @@ const COURSE_V10_LEVEL_1 = [
     topicLookupSegments(["要不要一起", "喝一杯"], ["飲みませんか", "一杯"], { 1: "？" }),
     "一杯飲みませんか。",
     [{ zh: "一杯", answer: "一杯" }, { zh: "要不要一起喝", answer: "飲みませんか" }],
-    ["飲みませんか", "一杯"],
-    { html: "<strong>飲みます</strong>表示“喝”，是在说明要喝东西。<strong>飲みませんか</strong>表示“要不要一起喝？”，是在礼貌地邀请对方。" }
+    ["飲みませんか", "一杯"]
   ),
   regular9876OralStep(
     "jp_date_l1_q14_oral_weekend",
     "第1关 · 口翻 · 题14",
     topicLookupSegments(["周末", "要不要见面"], ["週末に", "会いませんか"], { 1: "？" }),
     "週末に会いませんか。",
-    [{ zh: "周末", answer: "週末" }, { zh: "表示见面的时间", answer: "に" }, { zh: "要不要见面", answer: "会いませんか" }],
+    [{ zh: "周末", answer: "週末" }, { zh: "助词，放在时间后面", answer: "に" }, { zh: "要不要见面", answer: "会いませんか" }],
     ["会いませんか", "週末", "に"],
-    { html: "<strong>会います</strong>表示“见面”，是在说明要和对方见面。<strong>会いませんか</strong>表示“要不要见面？”，是在礼貌地邀请对方。<strong>週末に</strong>说明见面的时间是周末。" }
+    { html: "<strong>会います</strong>表示“见面”，<strong>会いませんか</strong>表示“要不要见面？”。动词后面的ます变为ませんか可以用来表示礼貌的邀请，即“要不要......？”" }
   ),
   regular9876OralStep(
     "jp_date_l1_q15_oral_cafe",
     "第1关 · 口翻 · 题15",
     topicLookupSegments(["要不要", "在咖啡馆", "见面"], ["会いませんか", "カフェで", "会います"], { 2: "？" }),
     "カフェで会いませんか。",
-    [{ zh: "咖啡馆", answer: "カフェ" }, { zh: "表示见面的地点", answer: "で" }, { zh: "要不要见面", answer: "会いませんか" }],
-    ["で", "会いませんか", "カフェ"],
-    { html: "<strong>会います</strong>表示“见面”，是在说明要和对方见面。<strong>会いませんか</strong>表示“要不要见面？”，是在礼貌地邀请对方。<strong>カフェで</strong>说明见面的地点是咖啡馆。" }
+    [{ zh: "咖啡馆", answer: "カフェ" }, { zh: "助词，放在动作地点后面", answer: "で" }, { zh: "要不要见面", answer: "会いませんか" }],
+    ["で", "会いませんか", "カフェ"]
   )
 ];
 
