@@ -6939,12 +6939,12 @@ const JP_ROMAJI = {
   "있어요": "isseoyo",
   "안녕하세요": "annyeonghaseyo",
   "가지고 있어요": "gajigo isseoyo",
-  "짧은 털을 가지고 있어요.": "jjalbeun teoreul gajigo isseoyo",
-  "긴 털을 가지고 있어요.": "gin teoreul gajigo isseoyo",
-  "풍성한 꼬리를 가지고 있어요.": "pungseonghan kkorireul gajigo isseoyo",
-  "줄무늬 꼬리를 가지고 있어요.": "julmunui kkorireul gajigo isseoyo",
-  "처진 귀를 가지고 있어요.": "cheojin gwireul gajigo isseoyo",
-  "큰 귀를 가지고 있어요.": "keun gwireul gajigo isseoyo",
+  "짧은 털 가지고 있어요.": "jjalbeun teol gajigo isseoyo",
+  "긴 털 가지고 있어요.": "gin teol gajigo isseoyo",
+  "풍성한 꼬리 가지고 있어요.": "pungseonghan kkori gajigo isseoyo",
+  "줄무늬 꼬리 가지고 있어요.": "julmunui kkori gajigo isseoyo",
+  "처진 귀 가지고 있어요.": "cheojin gwi gajigo isseoyo",
+  "큰 귀 가지고 있어요.": "keun gwi gajigo isseoyo",
   "숏헤어": "syoteuheeo",
   "숏헤어를": "syoteuheoreul",
   "키워요": "kiwoyo",
@@ -7014,12 +7014,12 @@ const JP_AUDIO_KEYS = {
   "있어요": "kr-isseoyo",
   "안녕하세요": "kr-annyeonghaseyo",
   "가지고 있어요": "kr-gajigo-isseoyo",
-  "짧은 털을 가지고 있어요.": "kr-jjalbeun-teoreul-gajigo-isseoyo",
-  "긴 털을 가지고 있어요.": "kr-gin-teoreul-gajigo-isseoyo",
-  "풍성한 꼬리를 가지고 있어요.": "kr-pungseonghan-kkorireul-gajigo-isseoyo",
-  "줄무늬 꼬리를 가지고 있어요.": "kr-julmunui-kkorireul-gajigo-isseoyo",
-  "처진 귀를 가지고 있어요.": "kr-cheojin-gwireul-gajigo-isseoyo",
-  "큰 귀를 가지고 있어요.": "kr-keun-gwireul-gajigo-isseoyo",
+  "짧은 털 가지고 있어요.": "kr-jjalbeun-teol-gajigo-isseoyo",
+  "긴 털 가지고 있어요.": "kr-gin-teol-gajigo-isseoyo",
+  "풍성한 꼬리 가지고 있어요.": "kr-pungseonghan-kkori-gajigo-isseoyo",
+  "줄무늬 꼬리 가지고 있어요.": "kr-julmunui-kkori-gajigo-isseoyo",
+  "처진 귀 가지고 있어요.": "kr-cheojin-gwi-gajigo-isseoyo",
+  "큰 귀 가지고 있어요.": "kr-keun-gwi-gajigo-isseoyo",
   "숏헤어를 키워요.": "kr-syoteuheoreul-kiwoyo",
   "브리티시 숏헤어": "kr-beuritisi-syoteuheeo",
   "아메리칸 숏헤어": "kr-amerikan-syoteuheeo",
@@ -12929,29 +12929,34 @@ const COURSE_V10_LEVEL_1_LEGACY = [
 
 const BEGINNER_SENTENCE_EXPLANATIONS = {
   shortFur: { tab: "句子语法讲解", blocks: [{ type: "body", parts: [
-    { text: "1. " }, { text: "짧은 털", color: "orange" }, { text: "表示“短毛”。放进这句话后变成" }, { text: "짧은 털을", color: "orange" }, { text: "，末尾多了을。\n" },
-    { text: "2. " }, { text: "을/를", color: "orange" }, { text: "是放在名词后面的助词，通常不单独翻译。\n" },
-    { text: "3. 这句话字面上是“有短毛”，没有说是谁有。韩语常省略上下文中明确的主语，因此中文补出“它”。" }
+    { text: "1. ...가지고 있어요表示“拥有着.../带有...”；\n" },
+    { text: "2. 韩语中宾语永远要放在谓语前面，所以“有短毛”的语序是“短毛+带有”；\n" },
+    { text: "3. 这句话字面上是“带有短毛”，没有说是谁有。韩语中通常会省略“你/我/他”这一类的主语。" }
   ] }] },
   longFur: { tab: "句子语法讲解", blocks: [{ type: "body", parts: [
-    { text: "1. " }, { text: "긴 털", color: "orange" }, { text: "表示“长毛”。放进句子后变成" }, { text: "긴 털을", color: "orange" }, { text: "；末尾的을通常不单独翻译。\n" },
-    { text: "2. 这句话字面上是“有长毛”，原句省略了主语；中文补出“它”。" }
+    { text: "1. ...가지고 있어요表示“拥有着.../带有...”；\n" },
+    { text: "2. 韩语中宾语永远要放在谓语前面，所以“有长毛”的语序是“长毛+带有”；\n" },
+    { text: "3. 这句话字面上是“带有长毛”，没有说是谁有。韩语中通常会省略“你/我/他”这一类的主语。" }
   ] }] },
   bushyTail: { tab: "句子语法讲解", blocks: [{ type: "body", parts: [
-    { text: "1. " }, { text: "풍성한 꼬리", color: "orange" }, { text: "表示“蓬松的尾巴”。放进句子后变成" }, { text: "풍성한 꼬리를", color: "orange" }, { text: "；末尾的를通常不单独翻译。\n" },
-    { text: "2. 这句话字面上是“有蓬松的尾巴”，原句省略了主语；中文补出“它”。" }
+    { text: "1. ...가지고 있어요表示“拥有着.../带有...”；\n" },
+    { text: "2. 韩语中宾语永远要放在谓语前面，所以“有蓬松的尾巴”的语序是“蓬松的尾巴+带有”；\n" },
+    { text: "3. 这句话字面上是“带有蓬松的尾巴”，没有说是谁有。韩语中通常会省略“你/我/他”这一类的主语。" }
   ] }] },
   stripedTail: { tab: "句子语法讲解", blocks: [{ type: "body", parts: [
-    { text: "1. " }, { text: "줄무늬 꼬리", color: "orange" }, { text: "表示“条纹尾巴”。放进句子后变成" }, { text: "줄무늬 꼬리를", color: "orange" }, { text: "；末尾的를通常不单独翻译。\n" },
-    { text: "2. 这句话字面上是“有条纹尾巴”，原句省略了主语；中文补出“它”。" }
+    { text: "1. ...가지고 있어요表示“拥有着.../带有...”；\n" },
+    { text: "2. 韩语中宾语永远要放在谓语前面，所以“有条纹尾巴”的语序是“条纹尾巴+带有”；\n" },
+    { text: "3. 这句话字面上是“带有条纹尾巴”，没有说是谁有。韩语中通常会省略“你/我/他”这一类的主语。" }
   ] }] },
   floppyEars: { tab: "句子语法讲解", blocks: [{ type: "body", parts: [
-    { text: "1. " }, { text: "처진 귀", color: "orange" }, { text: "表示“垂耳”。放进句子后变成" }, { text: "처진 귀를", color: "orange" }, { text: "；末尾的를通常不单独翻译。\n" },
-    { text: "2. 这句话字面上是“有垂耳”，原句省略了主语，也没有单独说“一双”；中文自然补成“它有一双垂耳”。" }
+    { text: "1. ...가지고 있어요表示“拥有着.../带有...”；\n" },
+    { text: "2. 韩语中宾语永远要放在谓语前面，所以“有垂耳”的语序是“垂耳+带有”；\n" },
+    { text: "3. 这句话字面上是“带有垂耳”，没有说是谁有。韩语中通常会省略“你/我/他”这一类的主语。" }
   ] }] },
   bigEars: { tab: "句子语法讲解", blocks: [{ type: "body", parts: [
-    { text: "1. " }, { text: "큰 귀", color: "orange" }, { text: "表示“大耳朵”。放进句子后变成" }, { text: "큰 귀를", color: "orange" }, { text: "；末尾的를通常不单独翻译。\n" },
-    { text: "2. 这句话字面上是“有大耳朵”，原句省略了主语；中文补出“它”。" }
+    { text: "1. ...가지고 있어요表示“拥有着.../带有...”；\n" },
+    { text: "2. 韩语中宾语永远要放在谓语前面，所以“有大耳朵”的语序是“大耳朵+带有”；\n" },
+    { text: "3. 这句话字面上是“带有大耳朵”，没有说是谁有。韩语中通常会省略“你/我/他”这一类的主语。" }
   ] }] }
 };
 
@@ -12959,31 +12964,31 @@ const COURSE_V10_LEVEL_1 = [
   beginnerWordStep("kr0_q01_teol", 1, "털", IMG.krBeginnerFur, "毛；毛发", ["尾巴", "耳朵"],
     "<strong>털</strong>通常指动物身上的毛，也可以指人体除头发以外的体毛。"),
   beginnerPhraseStep("kr0_q02_short_fur", 2, "짧은 털", IMG.krBeginnerShortFur, "短毛", ["짧은", "털"], ["털", "짧은"],
-    "1. <strong>짧은</strong>表示“短的”，放在<strong>털</strong>前面，用来说明毛的长度。<br>2. 韩语中，描述特点的词通常放在名词前面：짧은（短的）＋털（毛）＝短毛。"),
+    "1. <strong>짧은</strong>表示“短的”，放在<strong>털</strong>前面，用来修饰“毛”。<br>2. 韩语和中文一样，修饰名词的成分直接放在名词前面即可。"),
   beginnerPhraseStep("kr0_q03_long_fur", 3, "긴 털", IMG.krBeginnerLongFur, "长毛", ["긴", "털"], ["털", "긴", "짧은"],
-    "1. <strong>긴</strong>表示“长的”，放在名词前面说明长度。<br>2. <strong>긴 털</strong>指动物身上较长的毛，也就是“长毛”。"),
+    "<strong>긴</strong>表示“长的”，同样用来修饰名词<strong>털</strong>"),
 
   beginnerWordStep("kr0_q04_kkori", 4, "꼬리", IMG.krBeginnerTail, "尾巴", ["毛；毛发", "耳朵"],
     "<strong>꼬리</strong>通常指动物的尾巴。"),
   beginnerPhraseStep("kr0_q05_bushy_tail", 5, "풍성한 꼬리", IMG.krBeginnerBushyTail, "蓬松的尾巴", ["풍성한", "꼬리"], ["꼬리", "풍성한", "털"],
     "1. <strong>풍성한</strong>表示毛发等看起来“浓密、丰满”。<br>2. <strong>풍성한 꼬리</strong>不是说尾巴本身很大，而是说尾巴上的毛很多，看起来蓬松丰满。"),
   beginnerPhraseStep("kr0_q06_striped_tail", 6, "줄무늬 꼬리", IMG.krBeginnerStripedTail, "条纹尾巴", ["줄무늬", "꼬리"], ["꼬리", "줄무늬", "풍성한"],
-    "1. <strong>줄무늬</strong>表示由一条条线组成的“条纹、条纹图案”。<br>2. 줄무늬可以直接放在名词前面：줄무늬（条纹）＋꼬리（尾巴）＝条纹尾巴。"),
+    "1. <strong>줄무늬</strong>表示“条纹、条纹图案”。<br>2. <strong>줄무늬</strong>是名词，韩语中名词可以直接放在另一个名词前面修饰它。"),
 
   beginnerWordStep("kr0_q07_gwi", 7, "귀", IMG.krBeginnerEars, "耳朵", ["尾巴", "毛；毛发"],
     "韩语名词通常不会像汉语一样通过“一只、一双”体现数量。因此，<strong>귀</strong>根据上下文既可以理解为“一只耳朵”，也可以泛指“两只耳朵”。"),
   beginnerPhraseStep("kr0_q08_floppy_ears", 8, "처진 귀", IMG.krBeginnerFloppyEars, "垂耳", ["처진", "귀"], ["귀", "처진", "꼬리"],
-    "1. <strong>처진</strong>表示物体向下垂落的状态。<br>2. <strong>처진 귀</strong>指向下垂着的耳朵，也就是“垂耳”。"),
+    "<strong>처진</strong>表示“向下垂落的”。"),
   beginnerPhraseStep("kr0_q09_big_ears", 9, "큰 귀", IMG.krBeginnerPerkedEars, "大耳朵", ["큰", "귀"], ["귀", "큰", "처진"],
-    "<strong>큰</strong>表示“大、大的”，放在<strong>귀</strong>前面：큰 귀＝大耳朵。"),
+    "<strong>큰</strong>表示“大的”。"),
 
-  Object.assign(beginnerSentenceStep("kr0_q10_short_fur_sentence", 10, "짧은 털을", "귀", "짧은 털을 가지고 있어요.", null, "它有短毛", BEGINNER_SENTENCE_EXPLANATIONS.shortFur.blocks[0].parts), { image: null }),
-  Object.assign(beginnerSentenceStep("kr0_q11_bushy_tail_sentence", 11, "풍성한 꼬리를", "털", "풍성한 꼬리를 가지고 있어요.", null, "它有一条蓬松的尾巴", BEGINNER_SENTENCE_EXPLANATIONS.bushyTail.blocks[0].parts), { image: null }),
-  Object.assign(beginnerSentenceStep("kr0_q12_floppy_ears_sentence", 12, "처진 귀를", "꼬리", "처진 귀를 가지고 있어요.", null, "它有一双垂耳", BEGINNER_SENTENCE_EXPLANATIONS.floppyEars.blocks[0].parts), { image: null }),
+  Object.assign(beginnerSentenceStep("kr0_q10_short_fur_sentence", 10, "짧은 털", "귀", "짧은 털 가지고 있어요.", null, "它有短毛", BEGINNER_SENTENCE_EXPLANATIONS.shortFur.blocks[0].parts), { image: null }),
+  Object.assign(beginnerSentenceStep("kr0_q11_bushy_tail_sentence", 11, "풍성한 꼬리", "털", "풍성한 꼬리 가지고 있어요.", null, "它有一条蓬松的尾巴", BEGINNER_SENTENCE_EXPLANATIONS.bushyTail.blocks[0].parts), { image: null }),
+  Object.assign(beginnerSentenceStep("kr0_q12_floppy_ears_sentence", 12, "처진 귀", "꼬리", "처진 귀 가지고 있어요.", null, "它有一双垂耳", BEGINNER_SENTENCE_EXPLANATIONS.floppyEars.blocks[0].parts), { image: null }),
 
-  Object.assign(regular9876OralStep("kr0_q13_long_fur_oral", "第1关 · 口翻 · 题13", topicLookupSegments(["它", "有", "长毛"], ["（省略）", "가지고 있어요", "긴 털을"], { 2: "。" }), "긴 털을 가지고 있어요.", [{ zh: "长毛", answer: "긴 털을" }, { zh: "有", answer: "가지고 있어요" }], ["긴 털을", "가지고 있어요"]), { showChunkHints: true, lookupUnits: ["긴", "털을", "가지고", "있어요"], explanation: BEGINNER_SENTENCE_EXPLANATIONS.longFur }),
-  Object.assign(regular9876OralStep("kr0_q14_striped_tail_oral", "第1关 · 口翻 · 题14", topicLookupSegments(["它", "有", "一条带条纹的尾巴"], ["（省略）", "가지고 있어요", "줄무늬 꼬리를"], { 2: "。" }), "줄무늬 꼬리를 가지고 있어요.", [{ zh: "带条纹的尾巴", answer: "줄무늬 꼬리를" }, { zh: "有", answer: "가지고 있어요" }], ["줄무늬 꼬리를", "가지고 있어요"]), { showChunkHints: true, lookupUnits: ["줄무늬", "꼬리를", "가지고", "있어요"], explanation: BEGINNER_SENTENCE_EXPLANATIONS.stripedTail }),
-  Object.assign(regular9876OralStep("kr0_q15_big_ears_oral", "第1关 · 口翻 · 题15", topicLookupSegments(["它", "有", "一双大耳朵"], ["（省略）", "가지고 있어요", "큰 귀를"], { 2: "。" }), "큰 귀를 가지고 있어요.", [{ zh: "大耳朵", answer: "큰 귀를" }, { zh: "有", answer: "가지고 있어요" }], ["큰 귀를", "가지고 있어요"]), { showChunkHints: true, lookupUnits: ["큰", "귀를", "가지고", "있어요"], explanation: BEGINNER_SENTENCE_EXPLANATIONS.bigEars })
+  Object.assign(regular9876OralStep("kr0_q13_long_fur_oral", "第1关 · 口翻 · 题13", topicLookupSegments(["它", "有", "长毛"], ["（省略）", "가지고 있어요", "긴 털"], { 2: "。" }), "긴 털 가지고 있어요.", [{ zh: "长毛", answer: "긴 털" }, { zh: "有", answer: "가지고 있어요" }], ["긴 털", "가지고 있어요"]), { showChunkHints: true, lookupUnits: ["긴", "털", "가지고", "있어요"], explanation: BEGINNER_SENTENCE_EXPLANATIONS.longFur }),
+  Object.assign(regular9876OralStep("kr0_q14_striped_tail_oral", "第1关 · 口翻 · 题14", topicLookupSegments(["它", "有", "一条带条纹的尾巴"], ["（省略）", "가지고 있어요", "줄무늬 꼬리"], { 2: "。" }), "줄무늬 꼬리 가지고 있어요.", [{ zh: "带条纹的尾巴", answer: "줄무늬 꼬리" }, { zh: "有", answer: "가지고 있어요" }], ["줄무늬 꼬리", "가지고 있어요"]), { showChunkHints: true, lookupUnits: ["줄무늬", "꼬리", "가지고", "있어요"], explanation: BEGINNER_SENTENCE_EXPLANATIONS.stripedTail }),
+  Object.assign(regular9876OralStep("kr0_q15_big_ears_oral", "第1关 · 口翻 · 题15", topicLookupSegments(["它", "有", "一双大耳朵"], ["（省略）", "가지고 있어요", "큰 귀"], { 2: "。" }), "큰 귀 가지고 있어요.", [{ zh: "大耳朵", answer: "큰 귀" }, { zh: "有", answer: "가지고 있어요" }], ["큰 귀", "가지고 있어요"]), { showChunkHints: true, lookupUnits: ["큰", "귀", "가지고", "있어요"], explanation: BEGINNER_SENTENCE_EXPLANATIONS.bigEars })
 ];
 
 const COURSE_V10_LEVEL_2 = [
