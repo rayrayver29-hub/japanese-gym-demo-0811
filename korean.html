@@ -12929,34 +12929,9 @@ const COURSE_V10_LEVEL_1_LEGACY = [
 
 const BEGINNER_SENTENCE_EXPLANATIONS = {
   shortFur: { tab: "句子语法讲解", blocks: [{ type: "body", parts: [
-    { text: "1. ...가지고 있어요表示“拥有着.../带有...”；\n" },
+    { text: "1. " }, { text: "...가지고 있어요", color: "orange" }, { text: "表示“拥有着.../带有...”；\n" },
     { text: "2. 韩语中宾语永远要放在谓语前面，所以“有短毛”的语序是“短毛+带有”；\n" },
     { text: "3. 这句话字面上是“带有短毛”，没有说是谁有。韩语中通常会省略“你/我/他”这一类的主语。" }
-  ] }] },
-  longFur: { tab: "句子语法讲解", blocks: [{ type: "body", parts: [
-    { text: "1. ...가지고 있어요表示“拥有着.../带有...”；\n" },
-    { text: "2. 韩语中宾语永远要放在谓语前面，所以“有长毛”的语序是“长毛+带有”；\n" },
-    { text: "3. 这句话字面上是“带有长毛”，没有说是谁有。韩语中通常会省略“你/我/他”这一类的主语。" }
-  ] }] },
-  bushyTail: { tab: "句子语法讲解", blocks: [{ type: "body", parts: [
-    { text: "1. ...가지고 있어요表示“拥有着.../带有...”；\n" },
-    { text: "2. 韩语中宾语永远要放在谓语前面，所以“有蓬松的尾巴”的语序是“蓬松的尾巴+带有”；\n" },
-    { text: "3. 这句话字面上是“带有蓬松的尾巴”，没有说是谁有。韩语中通常会省略“你/我/他”这一类的主语。" }
-  ] }] },
-  stripedTail: { tab: "句子语法讲解", blocks: [{ type: "body", parts: [
-    { text: "1. ...가지고 있어요表示“拥有着.../带有...”；\n" },
-    { text: "2. 韩语中宾语永远要放在谓语前面，所以“有条纹尾巴”的语序是“条纹尾巴+带有”；\n" },
-    { text: "3. 这句话字面上是“带有条纹尾巴”，没有说是谁有。韩语中通常会省略“你/我/他”这一类的主语。" }
-  ] }] },
-  floppyEars: { tab: "句子语法讲解", blocks: [{ type: "body", parts: [
-    { text: "1. ...가지고 있어요表示“拥有着.../带有...”；\n" },
-    { text: "2. 韩语中宾语永远要放在谓语前面，所以“有垂耳”的语序是“垂耳+带有”；\n" },
-    { text: "3. 这句话字面上是“带有垂耳”，没有说是谁有。韩语中通常会省略“你/我/他”这一类的主语。" }
-  ] }] },
-  bigEars: { tab: "句子语法讲解", blocks: [{ type: "body", parts: [
-    { text: "1. ...가지고 있어요表示“拥有着.../带有...”；\n" },
-    { text: "2. 韩语中宾语永远要放在谓语前面，所以“有大耳朵”的语序是“大耳朵+带有”；\n" },
-    { text: "3. 这句话字面上是“带有大耳朵”，没有说是谁有。韩语中通常会省略“你/我/他”这一类的主语。" }
   ] }] }
 };
 
@@ -12983,12 +12958,12 @@ const COURSE_V10_LEVEL_1 = [
     "<strong>큰</strong>表示“大的”。"),
 
   Object.assign(beginnerSentenceStep("kr0_q10_short_fur_sentence", 10, "짧은 털", "귀", "짧은 털 가지고 있어요.", null, "它有短毛", BEGINNER_SENTENCE_EXPLANATIONS.shortFur.blocks[0].parts), { image: null }),
-  Object.assign(beginnerSentenceStep("kr0_q11_bushy_tail_sentence", 11, "풍성한 꼬리", "털", "풍성한 꼬리 가지고 있어요.", null, "它有一条蓬松的尾巴", BEGINNER_SENTENCE_EXPLANATIONS.bushyTail.blocks[0].parts), { image: null }),
-  Object.assign(beginnerSentenceStep("kr0_q12_floppy_ears_sentence", 12, "처진 귀", "꼬리", "처진 귀 가지고 있어요.", null, "它有一双垂耳", BEGINNER_SENTENCE_EXPLANATIONS.floppyEars.blocks[0].parts), { image: null }),
+  Object.assign(beginnerSentenceStep("kr0_q11_bushy_tail_sentence", 11, "풍성한 꼬리", "털", "풍성한 꼬리 가지고 있어요.", null, "它有一条蓬松的尾巴", []), { image: null, explanation: null }),
+  Object.assign(beginnerSentenceStep("kr0_q12_floppy_ears_sentence", 12, "처진 귀", "꼬리", "처진 귀 가지고 있어요.", null, "它有一双垂耳", []), { image: null, explanation: null }),
 
-  Object.assign(regular9876OralStep("kr0_q13_long_fur_oral", "第1关 · 口翻 · 题13", topicLookupSegments(["它", "有", "长毛"], ["（省略）", "가지고 있어요", "긴 털"], { 2: "。" }), "긴 털 가지고 있어요.", [{ zh: "长毛", answer: "긴 털" }, { zh: "有", answer: "가지고 있어요" }], ["긴 털", "가지고 있어요"]), { showChunkHints: true, lookupUnits: ["긴", "털", "가지고", "있어요"], explanation: BEGINNER_SENTENCE_EXPLANATIONS.longFur }),
-  Object.assign(regular9876OralStep("kr0_q14_striped_tail_oral", "第1关 · 口翻 · 题14", topicLookupSegments(["它", "有", "一条带条纹的尾巴"], ["（省略）", "가지고 있어요", "줄무늬 꼬리"], { 2: "。" }), "줄무늬 꼬리 가지고 있어요.", [{ zh: "带条纹的尾巴", answer: "줄무늬 꼬리" }, { zh: "有", answer: "가지고 있어요" }], ["줄무늬 꼬리", "가지고 있어요"]), { showChunkHints: true, lookupUnits: ["줄무늬", "꼬리", "가지고", "있어요"], explanation: BEGINNER_SENTENCE_EXPLANATIONS.stripedTail }),
-  Object.assign(regular9876OralStep("kr0_q15_big_ears_oral", "第1关 · 口翻 · 题15", topicLookupSegments(["它", "有", "一双大耳朵"], ["（省略）", "가지고 있어요", "큰 귀"], { 2: "。" }), "큰 귀 가지고 있어요.", [{ zh: "大耳朵", answer: "큰 귀" }, { zh: "有", answer: "가지고 있어요" }], ["큰 귀", "가지고 있어요"]), { showChunkHints: true, lookupUnits: ["큰", "귀", "가지고", "있어요"], explanation: BEGINNER_SENTENCE_EXPLANATIONS.bigEars })
+  Object.assign(regular9876OralStep("kr0_q13_long_fur_oral", "第1关 · 口翻 · 题13", topicLookupSegments(["它", "有", "长毛"], ["（省略）", "가지고 있어요", "긴 털"], { 2: "。" }), "긴 털 가지고 있어요.", [{ zh: "长毛", answer: "긴 털" }, { zh: "有", answer: "가지고 있어요" }], ["긴 털", "가지고 있어요"]), { showChunkHints: true, lookupUnits: ["긴", "털", "가지고", "있어요"], explanation: null }),
+  Object.assign(regular9876OralStep("kr0_q14_striped_tail_oral", "第1关 · 口翻 · 题14", topicLookupSegments(["它", "有", "一条带条纹的尾巴"], ["（省略）", "가지고 있어요", "줄무늬 꼬리"], { 2: "。" }), "줄무늬 꼬리 가지고 있어요.", [{ zh: "带条纹的尾巴", answer: "줄무늬 꼬리" }, { zh: "有", answer: "가지고 있어요" }], ["줄무늬 꼬리", "가지고 있어요"]), { showChunkHints: true, lookupUnits: ["줄무늬", "꼬리", "가지고", "있어요"], explanation: null }),
+  Object.assign(regular9876OralStep("kr0_q15_big_ears_oral", "第1关 · 口翻 · 题15", topicLookupSegments(["它", "有", "一双大耳朵"], ["（省略）", "가지고 있어요", "큰 귀"], { 2: "。" }), "큰 귀 가지고 있어요.", [{ zh: "大耳朵", answer: "큰 귀" }, { zh: "有", answer: "가지고 있어요" }], ["큰 귀", "가지고 있어요"]), { showChunkHints: true, lookupUnits: ["큰", "귀", "가지고", "있어요"], explanation: null })
 ];
 
 const COURSE_V10_LEVEL_2 = [
