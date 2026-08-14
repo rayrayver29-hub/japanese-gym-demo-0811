@@ -6511,7 +6511,7 @@ body.demo-body {
   <main id="entryView" class="demo-entry">
     <div>
       <h1 class="demo-entry-title">韩语 - 谈论萌宠</h1>
-      <p class="demo-entry-subtitle">Unit 1 - 毛发、尾巴与耳朵</p>
+      <p class="demo-entry-subtitle">Unit 1 - 脚爪、尾巴与花纹</p>
     </div>
     <div class="demo-lesson-entry-list" aria-label="课程入口">
       <button class="demo-lesson-card" type="button" data-level="1">
@@ -6911,6 +6911,16 @@ function _specEscape(value) {
   return String(value ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 }
 const JP_ROMAJI = {
+  "발": "bal",
+  "큼직한": "keumjikan",
+  "큼직한 발": "keumjikan bal",
+  "무": "mu",
+  "늬": "nui",
+  "무늬": "munui",
+  "흰": "huin",
+  "흰 무늬": "huin munui",
+  "큼직한 발 가지고 있어요.": "keumjikan bal gajigo isseoyo",
+  "흰 무늬 가지고 있어요.": "huin munui gajigo isseoyo",
   "털": "teol",
   "짧은": "jjalbeun",
   "긴": "gin",
@@ -6988,6 +6998,16 @@ const JP_ROMAJI = {
   "어 주세요": "eo juseyo"
 };
 const JP_AUDIO_KEYS = {
+  "발": "kr-bal",
+  "큼직한": "kr-keumjikan",
+  "큼직한 발": "kr-keumjikan-bal",
+  "무": "kr-mu",
+  "늬": "kr-nui",
+  "무늬": "kr-munui",
+  "흰": "kr-huin",
+  "흰 무늬": "kr-huin-munui",
+  "큼직한 발 가지고 있어요.": "kr-keumjikan-bal-gajigo-isseoyo",
+  "흰 무늬 가지고 있어요.": "kr-huin-munui-gajigo-isseoyo",
   "털": "kr-teol",
   "짧은": "kr-jjalbeun",
   "긴": "kr-gin",
@@ -12136,6 +12156,14 @@ const V10_GLOSS = {
 };
 
 Object.assign(V10_GLOSS, {
+  "발": "脚；爪子",
+  "큼직한": "大大的；个头较大的",
+  "큼직한 발": "大爪子",
+  "무": "무늬的第一个音节",
+  "늬": "무늬的第二个音节",
+  "무늬": "花纹；图案",
+  "흰": "白色的",
+  "흰 무늬": "白色花纹",
   "털": "毛；毛发",
   "짧은": "短的",
   "긴": "长的",
@@ -12231,6 +12259,10 @@ const IMG = {
 };
 
 Object.assign(IMG, {
+  krBeginnerPaw: "assets/images/kr-beginner-level1/q01-paw-v1.jpg",
+  krBeginnerLargePaws: "assets/images/kr-beginner-level1/q03-large-paws-v1.jpg",
+  krBeginnerPattern: "assets/images/kr-beginner-level1/q07-pattern-v1.jpg",
+  krBeginnerWhiteMarkings: "assets/images/kr-beginner-level1/q09-white-markings-v1.jpg",
   krBeginnerFur: "assets/images/kr-beginner-level1/q01-fur.jpg",
   krBeginnerShortFur: "assets/images/kr-beginner-level1/q02-short-fur.jpg",
   krBeginnerLongFur: "assets/images/kr-beginner-level1/q03-long-fur.jpg",
@@ -12934,42 +12966,42 @@ const COURSE_V10_LEVEL_1_LEGACY = [
 ];
 
 const BEGINNER_SENTENCE_EXPLANATIONS = {
-  longFur: { tab: "句子语法讲解", blocks: [{ type: "body", parts: [
+  largePaws: { tab: "句子语法讲解", blocks: [{ type: "body", parts: [
     { text: "1. " }, { text: "...가지고 있어요", color: "orange" }, { text: "表示“拥有着.../带有...”；\n" },
-    { text: "2. 韩语中宾语永远要放在谓语前面，所以“有长毛”的语序是“长毛+带有”；\n" },
-    { text: "3. 这句话字面上是“带有长毛”，没有说是谁有。韩语中通常会省略“你/我/他”这一类的主语。" }
+    { text: "2. 韩语中宾语永远要放在谓语前面，所以“有大爪子”的语序是“大爪子+带有”；\n" },
+    { text: "3. 这句话字面上是“带有大爪子”，没有说是谁有。韩语中通常会省略“你/我/他”这一类的主语。" }
   ] }] }
 };
 
 const COURSE_V10_LEVEL_1 = [
-  beginnerWordStep("kr0_q01_teol", 1, "털", IMG.krBeginnerFur, "毛；毛发", ["尾巴", "耳朵"],
-    "<strong>털</strong>通常指动物身上的毛，也可以指人体除头发以外的体毛。"),
-  Object.assign(beginnerPhraseStep("kr0_q02_teol_spelling", 2, "털", IMG.krBeginnerFur, "毛；毛发", ["털"], ["털"], null),
+  beginnerWordStep("kr0_q01_bal", 1, "발", IMG.krBeginnerPaw, "脚；爪子", ["尾巴", "花纹"],
+    "<strong>발</strong>表示人或动物的脚；描述宠物时，中文也常说“爪子”。"),
+  Object.assign(beginnerPhraseStep("kr0_q02_bal_spelling", 2, "발", IMG.krBeginnerPaw, "脚；爪子", ["발"], ["발"], null),
     { section: "第1关 · 拼单词 · 题2" }),
-  beginnerPhraseStep("kr0_q03_long_fur", 3, "긴 털", IMG.krBeginnerLongFur, "长毛", ["긴", "털"], ["긴", "털"],
-    "<strong>긴</strong>表示“长的”，同样用来修饰名词<strong>털</strong>"),
+  beginnerPhraseStep("kr0_q03_large_paws", 3, "큼직한 발", IMG.krBeginnerLargePaws, "大爪子", ["큼직한", "발"], ["큼직한", "발"],
+    "<strong>큼직한</strong>表示“个头较大、看起来很大”，放在<strong>발</strong>前面修饰“脚/爪子”。"),
 
-  beginnerWordStep("kr0_q04_kkori", 4, "꼬리", IMG.krBeginnerTail, "尾巴", ["毛；毛发", "耳朵"],
+  beginnerWordStep("kr0_q04_kkori", 4, "꼬리", IMG.krBeginnerTail, "尾巴", ["脚；爪子", "花纹"],
     "<strong>꼬리</strong>通常指动物的尾巴。"),
   Object.assign(beginnerPhraseStep("kr0_q05_kkori_spelling", 5, "꼬리", IMG.krBeginnerTail, "尾巴", ["꼬", "리"], ["꼬", "리"], null),
     { section: "第1关 · 拼单词 · 题5" }),
   beginnerPhraseStep("kr0_q06_bushy_tail", 6, "풍성한 꼬리", IMG.krBeginnerBushyTail, "蓬松的尾巴", ["풍성한", "꼬리"], ["풍성한", "꼬리"],
     "1. <strong>풍성한</strong>表示毛发等看起来“浓密、丰满”。<br>2. <strong>풍성한 꼬리</strong>不是说尾巴本身很大，而是说尾巴上的毛很多，看起来蓬松丰满。"),
 
-  beginnerWordStep("kr0_q07_gwi", 7, "귀", IMG.krBeginnerEars, "耳朵", ["尾巴", "毛；毛发"],
-    "韩语名词通常不会像汉语一样通过“一只、一双”体现数量。因此，<strong>귀</strong>根据上下文既可以理解为“一只耳朵”，也可以泛指“两只耳朵”。"),
-  Object.assign(beginnerPhraseStep("kr0_q08_gwi_spelling", 8, "귀", IMG.krBeginnerEars, "耳朵", ["귀"], ["귀"], null),
+  beginnerWordStep("kr0_q07_munui", 7, "무늬", IMG.krBeginnerPattern, "花纹", ["尾巴", "脚；爪子"],
+    "<strong>무늬</strong>既可以指条纹，也可以指斑点等不同图案。"),
+  Object.assign(beginnerPhraseStep("kr0_q08_munui_spelling", 8, "무늬", IMG.krBeginnerPattern, "花纹", ["무", "늬"], ["무", "늬"], null),
     { section: "第1关 · 拼单词 · 题8" }),
-  beginnerPhraseStep("kr0_q09_big_ears", 9, "큰 귀", IMG.krBeginnerPerkedEars, "大耳朵", ["큰", "귀"], ["큰", "귀"],
-    "<strong>큰</strong>表示“大的”。"),
+  beginnerPhraseStep("kr0_q09_white_markings", 9, "흰 무늬", IMG.krBeginnerWhiteMarkings, "白色花纹", ["흰", "무늬"], ["흰", "무늬"],
+    "<strong>흰</strong>表示“白色的”，放在<strong>무늬</strong>前面修饰“花纹”。"),
 
-  Object.assign(beginnerSentenceStep("kr0_q10_long_fur_sentence", 10, "긴 털", "귀", "큰 귀", "긴 털 가지고 있어요.", null, "它有长毛", BEGINNER_SENTENCE_EXPLANATIONS.longFur.blocks[0].parts), { image: null }),
-  Object.assign(beginnerSentenceStep("kr0_q11_bushy_tail_sentence", 11, "풍성한 꼬리", "털", "긴 털", "풍성한 꼬리 가지고 있어요.", null, "它有一条蓬松的尾巴", []), { image: null, explanation: null }),
-  Object.assign(beginnerSentenceStep("kr0_q12_big_ears_sentence", 12, "큰 귀", "꼬리", "풍성한 꼬리", "큰 귀 가지고 있어요.", null, "它有一双大耳朵", []), { image: null, explanation: null }),
+  Object.assign(beginnerSentenceStep("kr0_q10_large_paws_sentence", 10, "큼직한 발", "무늬", "흰 무늬", "큼직한 발 가지고 있어요.", null, "它有一双大爪子", BEGINNER_SENTENCE_EXPLANATIONS.largePaws.blocks[0].parts), { image: null }),
+  Object.assign(beginnerSentenceStep("kr0_q11_bushy_tail_sentence", 11, "풍성한 꼬리", "발", "큼직한 발", "풍성한 꼬리 가지고 있어요.", null, "它有一条蓬松的尾巴", []), { image: null, explanation: null }),
+  Object.assign(beginnerSentenceStep("kr0_q12_white_markings_sentence", 12, "흰 무늬", "꼬리", "풍성한 꼬리", "흰 무늬 가지고 있어요.", null, "它有白色花纹", []), { image: null, explanation: null }),
 
-  Object.assign(regular9876OralStep("kr0_q13_long_fur_oral", "第1关 · 口翻 · 题13", topicLookupSegments(["它", "有", "长毛"], ["（省略）", "가지고 있어요", "긴 털"], { 2: "。" }), "긴 털 가지고 있어요.", [{ zh: "长毛", answer: "긴 털" }, { zh: "有", answer: "가지고 있어요" }], ["긴 털", "가지고 있어요"]), { showChunkHints: true, lookupUnits: ["긴", "털", "가지고", "있어요"], explanation: null }),
+  Object.assign(regular9876OralStep("kr0_q13_large_paws_oral", "第1关 · 口翻 · 题13", topicLookupSegments(["它", "有", "一双大爪子"], ["（省略）", "가지고 있어요", "큼직한 발"], { 2: "。" }), "큼직한 발 가지고 있어요.", [{ zh: "大爪子", answer: "큼직한 발" }, { zh: "有", answer: "가지고 있어요" }], ["큼직한 발", "가지고 있어요"]), { showChunkHints: true, lookupUnits: ["큼직한", "발", "가지고", "있어요"], explanation: null }),
   Object.assign(regular9876OralStep("kr0_q14_bushy_tail_oral", "第1关 · 口翻 · 题14", topicLookupSegments(["它", "有", "一条蓬松的尾巴"], ["（省略）", "가지고 있어요", "풍성한 꼬리"], { 2: "。" }), "풍성한 꼬리 가지고 있어요.", [{ zh: "蓬松的尾巴", answer: "풍성한 꼬리" }, { zh: "有", answer: "가지고 있어요" }], ["풍성한 꼬리", "가지고 있어요"]), { showChunkHints: true, lookupUnits: ["풍성한", "꼬리", "가지고", "있어요"], explanation: null }),
-  Object.assign(regular9876OralStep("kr0_q15_big_ears_oral", "第1关 · 口翻 · 题15", topicLookupSegments(["它", "有", "一双大耳朵"], ["（省略）", "가지고 있어요", "큰 귀"], { 2: "。" }), "큰 귀 가지고 있어요.", [{ zh: "大耳朵", answer: "큰 귀" }, { zh: "有", answer: "가지고 있어요" }], ["큰 귀", "가지고 있어요"]), { showChunkHints: true, lookupUnits: ["큰", "귀", "가지고", "있어요"], explanation: null })
+  Object.assign(regular9876OralStep("kr0_q15_white_markings_oral", "第1关 · 口翻 · 题15", topicLookupSegments(["它", "有", "白色花纹"], ["（省略）", "가지고 있어요", "흰 무늬"], { 2: "。" }), "흰 무늬 가지고 있어요.", [{ zh: "白色花纹", answer: "흰 무늬" }, { zh: "有", answer: "가지고 있어요" }], ["흰 무늬", "가지고 있어요"]), { showChunkHints: true, lookupUnits: ["흰", "무늬", "가지고", "있어요"], explanation: null })
 ];
 
 const COURSE_V10_LEVEL_2 = [
