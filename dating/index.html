@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>日语健身房器材 demo</title>
+<title>日语约会赞美 demo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Inter:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
@@ -6488,8 +6488,8 @@ body.demo-body {
 <div class="demo-root">
   <main id="entryView" class="demo-entry">
     <div>
-      <h1 class="demo-entry-title">日语 - 约会与邀请</h1>
-      <p class="demo-entry-subtitle">Unit 1 - 发出简单邀请</p>
+      <h1 class="demo-entry-title">日语 - 约会与表达好感</h1>
+      <p class="demo-entry-subtitle">Unit 1 轻赞美</p>
     </div>
     <div class="demo-lesson-entry-list" aria-label="课程入口">
       <button class="demo-lesson-card" type="button" data-level="1">
@@ -6889,6 +6889,31 @@ function _specEscape(value) {
   return String(value ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 }
 const JP_ROMAJI = {
+  "センス": "sensu",
+  "セン": "sen",
+  "ス": "su",
+  "服": "fuku",
+  "服の": "fuku no",
+  "服のセンス": "fuku no sensu",
+  "笑顔": "egao",
+  "笑": "e",
+  "顔": "gao",
+  "優しい": "yasashii",
+  "優しい笑顔": "yasashii egao",
+  "雰囲気": "fun'iki",
+  "雰": "fun",
+  "囲気": "'iki",
+  "明るい": "akarui",
+  "明るい雰囲気": "akarui fun'iki",
+  "が": "ga",
+  "ありがとう": "arigatō",
+  "素敵ですね": "suteki desu ne",
+  "服のセンスが": "fuku no sensu ga",
+  "優しい笑顔が": "yasashii egao ga",
+  "明るい雰囲気が": "akarui fun'iki ga",
+  "服のセンスが素敵ですね。": "fuku no sensu ga suteki desu ne",
+  "優しい笑顔が素敵ですね。": "yasashii egao ga suteki desu ne",
+  "明るい雰囲気が素敵ですね。": "akarui fun'iki ga suteki desu ne",
   "行きます": "ikimasu",
   "映画": "eiga",
   "映画に": "eiga ni",
@@ -6950,6 +6975,30 @@ const JP_ROMAJI = {
   "ゆっくり": "yukkuri"
 };
 const JP_AUDIO_KEYS = {
+  "センス": "jp-compliment-sensu",
+  "セン": "jp-compliment-sen",
+  "ス": "jp-compliment-su",
+  "服の": "jp-compliment-fuku-no",
+  "服のセンス": "jp-compliment-fuku-no-sensu",
+  "笑顔": "jp-compliment-egao",
+  "笑": "jp-compliment-e",
+  "顔": "jp-compliment-gao",
+  "優しい": "jp-compliment-yasashii",
+  "優しい笑顔": "jp-compliment-yasashii-egao",
+  "雰囲気": "jp-compliment-funiki",
+  "雰": "jp-compliment-fun",
+  "囲気": "jp-compliment-iki",
+  "明るい": "jp-compliment-akarui",
+  "明るい雰囲気": "jp-compliment-akarui-funiki",
+  "が": "jp-compliment-ga",
+  "ありがとう": "jp-compliment-arigato",
+  "素敵ですね": "jp-compliment-suteki-desu-ne",
+  "服のセンスが": "jp-compliment-fuku-no-sensu-ga",
+  "優しい笑顔が": "jp-compliment-yasashii-egao-ga",
+  "明るい雰囲気が": "jp-compliment-akarui-funiki-ga",
+  "服のセンスが素敵ですね。": "jp-compliment-fuku-no-sensu-ga-suteki-desu-ne",
+  "優しい笑顔が素敵ですね。": "jp-compliment-yasashii-egao-ga-suteki-desu-ne",
+  "明るい雰囲気が素敵ですね。": "jp-compliment-akarui-funiki-ga-suteki-desu-ne",
   "行きます": "jp-date-ikimasu",
   "映画": "jp-date-eiga",
   "映画に": "jp-date-eiga-ni",
@@ -12114,6 +12163,21 @@ const V10_GLOSS = {
 };
 
 Object.assign(V10_GLOSS, {
+  "センス": "品味；审美",
+  "服": "衣服",
+  "服の": "衣服的；穿衣方面的",
+  "服のセンス": "穿衣品味",
+  "笑顔": "笑容",
+  "優しい": "温柔的",
+  "優しい笑顔": "温柔的笑容",
+  "雰囲気": "氛围；给人的感觉",
+  "明るい": "明亮的；开朗的",
+  "明るい雰囲気": "开朗的气质",
+  "が": "助词，放在被赞美的内容后面",
+  "素敵ですね": "很棒呢；很有魅力呢",
+  "服のセンスが": "穿衣品味（作为被赞美的内容）",
+  "優しい笑顔が": "温柔的笑容（作为被赞美的内容）",
+  "明るい雰囲気が": "开朗的气质（作为被赞美的内容）",
   "その": "那个",
   "この": "这个",
   "プレート": "杠铃片",
@@ -12136,6 +12200,11 @@ Object.assign(V10_GLOSS, {
 });
 
 const IMG = {
+  jpComplimentSenseMan: "assets/images/jp-dating-compliments-level1/q01-sense-man-v2.jpg",
+  jpComplimentFashionWoman: "assets/images/jp-dating-compliments-level1/q03-fashion-sense-woman-v2.jpg",
+  jpComplimentGentleSmile: "assets/images/jp-dating-compliments-level1/q02-gentle-smile.jpg",
+  jpComplimentAtmosphereScene: "assets/images/jp-dating-compliments-level1/q07-atmosphere-scene-v2.jpg",
+  jpComplimentBrightVibe: "assets/images/jp-dating-compliments-level1/q09-bright-vibe-v2.jpg",
   jpDateIkimasu: "assets/images/jp-dating-level1/q01-ikimasu.jpg",
   jpDateMovie: "assets/images/jp-dating-level1/q02-movie.jpg",
   jpDatePark: "assets/images/jp-dating-level1/q03-park.jpg",
@@ -12616,183 +12685,185 @@ const V11_LEVEL4_CORE = [
 
 const COURSE_V10_LEVEL_1 = [
   {
-    id: "jp_date_l1_q1_ikimasu_meaning",
+    id: "jp_compliment_l1_q1_sensu_meaning",
     type: "contextMeaning",
     section: "第1关 · 词义 · 题1",
-    phrase: "行きます",
-    image: IMG.jpDateIkimasu,
-    sentence: "行きます",
-    options: ["去", "喝"],
-    correct: "去"
+    phrase: "センス",
+    image: IMG.jpComplimentSenseMan,
+    sentence: "センス",
+    options: ["品味；审美", "冰箱"],
+    correct: "品味；审美",
+    explanation: { html: "<strong>センス（sensu）</strong>来自英语 <strong>sense</strong>，表示“品味、审美”。" }
   },
   {
-    id: "jp_date_l1_q2_movie_spelling",
+    id: "jp_compliment_l1_q2_sensu_spelling",
     type: "spelling",
     section: "第1关 · 拼写 · 题2",
-    image: IMG.jpDateMovie,
-    fullPhrase: "映画に行きます",
-    translation: "去看电影",
+    image: IMG.jpComplimentSenseMan,
+    fullPhrase: "センス",
+    translation: "品味；审美",
     gloss: V10_GLOSS,
-    lookupUnits: ["映画に", "行きます"],
-    chunks: ["映画に", "行きます"],
-    options: ["映画に", "行きます"],
-    explanation: { html: "<strong>映画</strong>是“电影”。<strong>に</strong>是助词，放在要去的地方或参加的活动后面，是一种固定搭配。<br><br>结构：地方或活动＋<strong>に</strong>＋行きます" }
+    lookupUnits: ["センス"],
+    chunks: ["セン", "ス"],
+    options: ["セン", "ス"]
   },
   {
-    id: "jp_date_l1_q3_park_spelling",
+    id: "jp_compliment_l1_q3_fashion_sense_spelling",
     type: "spelling",
     section: "第1关 · 拼写 · 题3",
-    image: IMG.jpDatePark,
-    fullPhrase: "公園に行きます",
-    translation: "去公园",
+    image: IMG.jpComplimentFashionWoman,
+    fullPhrase: "服のセンス",
+    translation: "穿衣品味",
     gloss: V10_GLOSS,
-    lookupUnits: ["公園に", "行きます"],
-    chunks: ["公園に", "行きます"],
-    options: ["公園に", "行きます"]
+    lookupUnits: ["服の", "センス"],
+    chunks: ["服の", "センス"],
+    options: ["服の", "センス"],
+    explanation: { html: "<strong>服</strong>是“衣服”。<strong>の</strong>相当于中文的“的”，<strong>服のセンス</strong>就是“衣服的品味”，中文里更自然地说“穿衣品味”。" }
   },
   {
-    id: "jp_date_l1_q4_nomimasu_meaning",
+    id: "jp_compliment_l1_q4_egao_meaning",
     type: "contextMeaning",
     section: "第1关 · 词义 · 题4",
-    phrase: "飲みます",
-    image: IMG.jpDateNomimasu,
-    sentence: "飲みます",
-    options: ["喝", "见面"],
-    correct: "喝"
+    phrase: "笑顔",
+    image: IMG.jpComplimentGentleSmile,
+    sentence: "笑顔",
+    options: ["笑容", "声音"],
+    correct: "笑容"
   },
   {
-    id: "jp_date_l1_q5_tea_spelling",
+    id: "jp_compliment_l1_q5_egao_spelling",
     type: "spelling",
     section: "第1关 · 拼写 · 题5",
-    image: IMG.jpDateTea,
-    fullPhrase: "お茶を飲みます",
-    translation: "喝茶",
+    image: IMG.jpComplimentGentleSmile,
+    fullPhrase: "笑顔",
+    translation: "笑容",
     gloss: V10_GLOSS,
-    lookupUnits: ["お茶を", "飲みます"],
-    chunks: ["お茶を", "飲みます"],
-    options: ["お茶を", "飲みます"],
-    explanation: { html: "<strong>お茶</strong>是“茶”。<strong>を</strong>是搭配动作的助词，放在动词之前，名词之后。口语中也可以省略<strong>を</strong>，语气会更加放松随性。" }
+    lookupUnits: ["笑顔"],
+    chunks: ["笑", "顔"],
+    options: ["笑", "顔"]
   },
   {
-    id: "jp_date_l1_q6_one_drink_spelling",
+    id: "jp_compliment_l1_q6_gentle_smile_spelling",
     type: "spelling",
     section: "第1关 · 拼写 · 题6",
-    image: IMG.jpDateOneDrink,
-    fullPhrase: "一杯飲みます",
-    translation: "喝一杯",
+    image: IMG.jpComplimentGentleSmile,
+    fullPhrase: "優しい笑顔",
+    translation: "温柔的笑容",
     gloss: V10_GLOSS,
-    lookupUnits: ["一杯", "飲みます"],
-    chunks: ["一杯", "飲みます"],
-    options: ["一杯", "飲みます"],
-    explanation: { html: "日语里动词常常放在句子的末尾，这里并不是说一杯喝的，而是说喝一杯。日语里说“喝一杯”，大概率就是说喝一杯酒。" }
+    lookupUnits: ["優しい", "笑顔"],
+    chunks: ["優しい", "笑顔"],
+    options: ["優しい", "笑顔"],
+    explanation: { html: "<strong>優しい</strong>表示“温柔的”。表示特点的词放在名词前面，<strong>優しい笑顔</strong>就是“温柔的笑容”。" }
   },
   {
-    id: "jp_date_l1_q7_aimasu_meaning",
+    id: "jp_compliment_l1_q7_funiki_meaning",
     type: "contextMeaning",
     section: "第1关 · 词义 · 题7",
-    phrase: "会います",
-    image: IMG.jpDateAimasu,
-    sentence: "会います",
-    options: ["见面", "去"],
-    correct: "见面"
+    phrase: "雰囲気",
+    image: IMG.jpComplimentAtmosphereScene,
+    sentence: "雰囲気",
+    options: ["氛围；给人的感觉", "衣服"],
+    correct: "氛围；给人的感觉",
+    explanation: { html: "<strong>雰囲気</strong>表示“氛围、给人的感觉”。它指某个地方、情況或人物所散发出的整体感觉。" }
   },
   {
-    id: "jp_date_l1_q8_weekend_spelling",
+    id: "jp_compliment_l1_q8_funiki_spelling",
     type: "spelling",
     section: "第1关 · 拼写 · 题8",
-    image: IMG.jpDateWeekendMeet,
-    fullPhrase: "週末に会います",
-    translation: "周末见面",
+    image: IMG.jpComplimentAtmosphereScene,
+    fullPhrase: "雰囲気",
+    translation: "氛围；给人的感觉",
     gloss: V10_GLOSS,
-    lookupUnits: ["週末に", "会います"],
-    chunks: ["週末に", "会います"],
-    options: ["週末に", "会います"],
-    explanation: { html: "<strong>週末</strong>是“周末”。<strong>に</strong>是助词，还可以放在时间后面，是一种固定搭配。<br><br>结构：时间＋<strong>に</strong>＋会います" }
+    lookupUnits: ["雰囲気"],
+    chunks: ["雰", "囲気"],
+    options: ["雰", "囲気"]
   },
   {
-    id: "jp_date_l1_q9_cafe_spelling",
+    id: "jp_compliment_l1_q9_bright_vibe_spelling",
     type: "spelling",
     section: "第1关 · 拼写 · 题9",
-    image: IMG.jpDateCafeMeet,
-    fullPhrase: "カフェで会います",
-    translation: "在咖啡馆见面",
+    image: IMG.jpComplimentBrightVibe,
+    fullPhrase: "明るい雰囲気",
+    translation: "开朗的气质",
     gloss: V10_GLOSS,
-    lookupUnits: ["カフェで", "会います"],
-    chunks: ["カフェで", "会います"],
-    options: ["カフェで", "会います"],
-    explanation: { html: "<strong>カフェ</strong>是“咖啡馆”。<strong>で</strong>是助词，放在动作发生的地点后面，是一种固定搭配。<br><br>结构：见面地点＋<strong>で</strong>＋会います" }
+    lookupUnits: ["明るい", "雰囲気"],
+    chunks: ["明るい", "雰囲気"],
+    options: ["明るい", "雰囲気"],
+    explanation: { html: "<strong>明るい</strong>可以表示“开朗的”。放在<strong>雰囲気</strong>前面时，<strong>明るい雰囲気</strong>表示“开朗的气质、给人开朗的感觉”。" }
   },
   {
-    id: "jp_date_l1_q10_movie_invite",
+    id: "jp_compliment_l1_q10_fashion_sense_sentence",
     type: "twoOption",
     section: "第1关 · 逐块组句 · 题10",
-    prompt: "要不要一起去看电影？",
-    promptSegments: topicLookupSegments(["要不要一起", "去看电影"], ["行きませんか", "映画に"], { 1: "？" }),
-    fullSentence: "映画に行きませんか。",
+    prompt: "你的穿衣品味很棒呢。",
+    promptSegments: topicLookupSegments(["你的穿衣品味", "很棒呢"], ["服のセンスが", "素敵ですね"], { 1: "。" }),
+    fullSentence: "服のセンスが素敵ですね。",
     gloss: V10_GLOSS,
-    lookupUnits: ["映画", "に", "行きませんか"],
+    lookupUnits: ["服のセンス", "が", "素敵ですね"],
     groups: [
-      { zh: "电影", options: ["映画", "公園"], correct: "映画" },
-      { zh: "助词，放在活动后面", options: ["に", "カフェ"], correct: "に" },
-      { zh: "要不要一起去", options: ["行きませんか", "飲みませんか"], correct: "行きませんか" }
+      { zh: "穿衣方面的", options: ["服の", "優しい"], correct: "服の" },
+      { zh: "品味", options: ["センス", "笑顔"], correct: "センス" },
+      { zh: "助词，放在被赞美的内容后面", options: ["が", "雰囲気"], correct: "が" },
+      { zh: "很棒呢", options: ["素敵ですね", "明るい"], correct: "素敵ですね" }
     ],
-    explanation: { html: "<strong class=\"spec-explanation-orange\">行きます</strong>表示“去”，<strong class=\"spec-explanation-orange\">行きませんか</strong>表示“要不要一起去？”。动词后面的<strong class=\"spec-explanation-orange\">ます</strong>变为<strong class=\"spec-explanation-orange\">ませんか</strong>可以用来表示礼貌的邀请，即“要不要......？”" }
+    explanation: { html: "<strong class=\"spec-explanation-orange\">が</strong>是助词，放在被赞美的内容后面。<strong class=\"spec-explanation-orange\">素敵</strong>表示“很棒、很有魅力”，<strong class=\"spec-explanation-orange\">ですね</strong>让赞美听起来更自然、柔和。<br><br>结构：赞美的内容＋<strong class=\"spec-explanation-orange\">が</strong>＋素敵ですね" }
   },
   {
-    id: "jp_date_l1_q11_park_invite",
+    id: "jp_compliment_l1_q11_gentle_smile_sentence",
     type: "twoOption",
     section: "第1关 · 逐块组句 · 题11",
-    prompt: "要不要一起去公园？",
-    promptSegments: topicLookupSegments(["要不要一起", "去公园"], ["行きませんか", "公園に"], { 1: "？" }),
-    fullSentence: "公園に行きませんか。",
+    prompt: "你温柔的笑容很迷人呢。",
+    promptSegments: topicLookupSegments(["温柔的笑容", "很迷人呢"], ["優しい笑顔が", "素敵ですね"], { 1: "。" }),
+    fullSentence: "優しい笑顔が素敵ですね。",
     gloss: V10_GLOSS,
-    lookupUnits: ["公園", "に", "行きませんか"],
+    lookupUnits: ["優しい笑顔", "が", "素敵ですね"],
     groups: [
-      { zh: "公园", options: ["公園", "映画"], correct: "公園" },
-      { zh: "助词，放在地点后面", options: ["に", "お茶"], correct: "に" },
-      { zh: "要不要一起去", options: ["行きませんか", "会いませんか"], correct: "行きませんか" }
-    ]
+      { zh: "温柔的", options: ["優しい", "明るい"], correct: "優しい" },
+      { zh: "笑容", options: ["笑顔", "センス"], correct: "笑顔" },
+      { zh: "助词，放在被赞美的内容后面", options: ["が", "服の"], correct: "が" },
+      { zh: "很迷人呢", options: ["素敵ですね", "雰囲気"], correct: "素敵ですね" }
+    ],
+    explanation: { html: "<strong class=\"spec-explanation-orange\">優しい笑顔が素敵ですね</strong>适合当面称赞对方的笑容温柔而有魅力。句尾的<strong class=\"spec-explanation-orange\">ね</strong>让语气更像自然地和对方分享感受。" }
   },
   {
-    id: "jp_date_l1_q12_tea_invite",
+    id: "jp_compliment_l1_q12_bright_vibe_sentence",
     type: "twoOption",
     section: "第1关 · 逐块组句 · 题12",
-    prompt: "要不要一起喝茶？",
-    promptSegments: topicLookupSegments(["要不要一起", "喝茶"], ["飲みませんか", "お茶を"], { 1: "？" }),
-    fullSentence: "お茶を飲みませんか。",
+    prompt: "你开朗的气质很有魅力呢。",
+    promptSegments: topicLookupSegments(["开朗的气质", "很有魅力呢"], ["明るい雰囲気が", "素敵ですね"], { 1: "。" }),
+    fullSentence: "明るい雰囲気が素敵ですね。",
     gloss: V10_GLOSS,
-    lookupUnits: ["お茶", "を", "飲みませんか"],
+    lookupUnits: ["明るい雰囲気", "が", "素敵ですね"],
     groups: [
-      { zh: "茶", options: ["お茶", "一杯"], correct: "お茶" },
-      { zh: "搭配动作的助词，放在名词后", options: ["を", "週末"], correct: "を" },
-      { zh: "要不要一起喝", options: ["飲みませんか", "行きませんか"], correct: "飲みませんか" }
-    ],
-    explanation: { html: "<strong class=\"spec-explanation-orange\">飲みます</strong>表示“喝”，<strong class=\"spec-explanation-orange\">飲みませんか</strong>表示“要不要一起喝？”。动词后面的<strong class=\"spec-explanation-orange\">ます</strong>变为<strong class=\"spec-explanation-orange\">ませんか</strong>可以用来表示礼貌的邀请，即“要不要......？”" }
+      { zh: "开朗的", options: ["明るい", "優しい"], correct: "明るい" },
+      { zh: "气质", options: ["雰囲気", "笑顔"], correct: "雰囲気" },
+      { zh: "助词，放在被赞美的内容后面", options: ["が", "センス"], correct: "が" },
+      { zh: "很有魅力呢", options: ["素敵ですね", "服の"], correct: "素敵ですね" }
+    ]
   },
   regular9876OralStep(
-    "jp_date_l1_q13_oral_one_drink",
+    "jp_compliment_l1_q13_oral_fashion_sense",
     "第1关 · 口翻 · 题13",
-    topicLookupSegments(["要不要一起", "喝一杯"], ["飲みませんか", "一杯"], { 1: "？" }),
-    "一杯飲みませんか。",
-    [{ zh: "一杯", answer: "一杯" }, { zh: "要不要一起喝", answer: "飲みませんか" }],
-    ["飲みませんか", "一杯"]
+    topicLookupSegments(["你的穿衣品味", "很棒呢"], ["服のセンスが", "素敵ですね"], { 1: "。" }),
+    "服のセンスが素敵ですね。",
+    [{ zh: "穿衣方面的", answer: "服の" }, { zh: "品味", answer: "センス" }, { zh: "助词，放在被赞美的内容后面", answer: "が" }, { zh: "很棒呢", answer: "素敵ですね" }],
+    ["素敵ですね", "服の", "が", "センス"]
   ),
   regular9876OralStep(
-    "jp_date_l1_q14_oral_weekend",
+    "jp_compliment_l1_q14_oral_gentle_smile",
     "第1关 · 口翻 · 题14",
-    topicLookupSegments(["周末", "要不要见面"], ["週末に", "会いませんか"], { 1: "？" }),
-    "週末に会いませんか。",
-    [{ zh: "周末", answer: "週末" }, { zh: "助词，放在时间后面", answer: "に" }, { zh: "要不要见面", answer: "会いませんか" }],
-    ["会いませんか", "週末", "に"],
-    { html: "<strong class=\"spec-explanation-orange\">会います</strong>表示“见面”，<strong class=\"spec-explanation-orange\">会いませんか</strong>表示“要不要见面？”。动词后面的<strong class=\"spec-explanation-orange\">ます</strong>变为<strong class=\"spec-explanation-orange\">ませんか</strong>可以用来表示礼貌的邀请，即“要不要......？”" }
+    topicLookupSegments(["你温柔的笑容", "很迷人呢"], ["優しい笑顔が", "素敵ですね"], { 1: "。" }),
+    "優しい笑顔が素敵ですね。",
+    [{ zh: "温柔的", answer: "優しい" }, { zh: "笑容", answer: "笑顔" }, { zh: "助词，放在被赞美的内容后面", answer: "が" }, { zh: "很迷人呢", answer: "素敵ですね" }],
+    ["素敵ですね", "笑顔", "優しい", "が"]
   ),
   regular9876OralStep(
-    "jp_date_l1_q15_oral_cafe",
+    "jp_compliment_l1_q15_oral_bright_vibe",
     "第1关 · 口翻 · 题15",
-    topicLookupSegments(["要不要", "在咖啡馆", "见面"], ["会いませんか", "カフェで", "会います"], { 2: "？" }),
-    "カフェで会いませんか。",
-    [{ zh: "咖啡馆", answer: "カフェ" }, { zh: "助词，放在动作地点后面", answer: "で" }, { zh: "要不要见面", answer: "会いませんか" }],
-    ["で", "会いませんか", "カフェ"]
+    topicLookupSegments(["你开朗的气质", "很有魅力呢"], ["明るい雰囲気が", "素敵ですね"], { 1: "。" }),
+    "明るい雰囲気が素敵ですね。",
+    [{ zh: "开朗的", answer: "明るい" }, { zh: "气质", answer: "雰囲気" }, { zh: "助词，放在被赞美的内容后面", answer: "が" }, { zh: "很有魅力呢", answer: "素敵ですね" }],
+    ["が", "素敵ですね", "雰囲気", "明るい"]
   )
 ];
 
