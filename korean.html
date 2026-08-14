@@ -12691,7 +12691,7 @@ function beginnerPhraseStep(id, number, phrase, image, translation, chunks, opti
     lookupUnits: chunks, chunks, options: chunks, wordExplanation: explanation
   };
 }
-function beginnerSentenceStep(id, number, phraseWithParticle, alternatePhrase, sentence, image, translation, explanation) {
+function beginnerSentenceStep(id, number, phraseWithParticle, alternatePhrase, predicateDistractor, sentence, image, translation, explanation) {
   const objectZh = translation.replace(/^它有(?:一条|一双)?/, "");
   return {
     id, type: "twoOption", section: `第1关 · 新句子 · 题${number}`,
@@ -12703,7 +12703,7 @@ function beginnerSentenceStep(id, number, phraseWithParticle, alternatePhrase, s
       : [phraseWithParticle, "가지고", "있어요"],
     groups: [
       { zh: objectZh, options: [phraseWithParticle, alternatePhrase], correct: phraseWithParticle },
-      { zh: "有", options: ["가지고 있어요", "안녕하세요"], correct: "가지고 있어요" }
+      { zh: "有", options: ["가지고 있어요", predicateDistractor], correct: "가지고 있어요" }
     ],
     explanation: { tab: "句子语法讲解", blocks: [{ type: "body", parts: explanation }] }
   };
@@ -12963,9 +12963,9 @@ const COURSE_V10_LEVEL_1 = [
   beginnerPhraseStep("kr0_q09_big_ears", 9, "큰 귀", IMG.krBeginnerPerkedEars, "大耳朵", ["큰", "귀"], ["큰", "귀"],
     "<strong>큰</strong>表示“大的”。"),
 
-  Object.assign(beginnerSentenceStep("kr0_q10_long_fur_sentence", 10, "긴 털", "귀", "긴 털 가지고 있어요.", null, "它有长毛", BEGINNER_SENTENCE_EXPLANATIONS.longFur.blocks[0].parts), { image: null }),
-  Object.assign(beginnerSentenceStep("kr0_q11_bushy_tail_sentence", 11, "풍성한 꼬리", "털", "풍성한 꼬리 가지고 있어요.", null, "它有一条蓬松的尾巴", []), { image: null, explanation: null }),
-  Object.assign(beginnerSentenceStep("kr0_q12_big_ears_sentence", 12, "큰 귀", "꼬리", "큰 귀 가지고 있어요.", null, "它有一双大耳朵", []), { image: null, explanation: null }),
+  Object.assign(beginnerSentenceStep("kr0_q10_long_fur_sentence", 10, "긴 털", "귀", "큰 귀", "긴 털 가지고 있어요.", null, "它有长毛", BEGINNER_SENTENCE_EXPLANATIONS.longFur.blocks[0].parts), { image: null }),
+  Object.assign(beginnerSentenceStep("kr0_q11_bushy_tail_sentence", 11, "풍성한 꼬리", "털", "긴 털", "풍성한 꼬리 가지고 있어요.", null, "它有一条蓬松的尾巴", []), { image: null, explanation: null }),
+  Object.assign(beginnerSentenceStep("kr0_q12_big_ears_sentence", 12, "큰 귀", "꼬리", "풍성한 꼬리", "큰 귀 가지고 있어요.", null, "它有一双大耳朵", []), { image: null, explanation: null }),
 
   Object.assign(regular9876OralStep("kr0_q13_long_fur_oral", "第1关 · 口翻 · 题13", topicLookupSegments(["它", "有", "长毛"], ["（省略）", "가지고 있어요", "긴 털"], { 2: "。" }), "긴 털 가지고 있어요.", [{ zh: "长毛", answer: "긴 털" }, { zh: "有", answer: "가지고 있어요" }], ["긴 털", "가지고 있어요"]), { showChunkHints: true, lookupUnits: ["긴", "털", "가지고", "있어요"], explanation: null }),
   Object.assign(regular9876OralStep("kr0_q14_bushy_tail_oral", "第1关 · 口翻 · 题14", topicLookupSegments(["它", "有", "一条蓬松的尾巴"], ["（省略）", "가지고 있어요", "풍성한 꼬리"], { 2: "。" }), "풍성한 꼬리 가지고 있어요.", [{ zh: "蓬松的尾巴", answer: "풍성한 꼬리" }, { zh: "有", answer: "가지고 있어요" }], ["풍성한 꼬리", "가지고 있어요"]), { showChunkHints: true, lookupUnits: ["풍성한", "꼬리", "가지고", "있어요"], explanation: null }),
