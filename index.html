@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>日语健身房器材 demo</title>
+<title>谈论日本交通 demo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Inter:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
@@ -3142,6 +3142,61 @@ body {
   background: #E6E9EE;
   pointer-events: none;
 }
+.spec-all-chunk-builder {
+  gap: 22px;
+}
+.spec-all-chunk-builder .spec-topic-card {
+  margin-bottom: 2px;
+}
+.spec-all-chunk-answer-area {
+  width: 361px;
+  min-height: 92px;
+  padding: 12px 0 4px;
+  display: flex;
+  align-items: flex-start;
+}
+.spec-all-chunk-answer-area .spec-slots {
+  align-items: flex-end;
+  row-gap: 16px;
+}
+.spec-all-chunk-options {
+  width: 361px;
+  min-height: 72px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 10px;
+  padding-top: 4px;
+}
+.spec-all-chunk-option {
+  min-width: 72px;
+  min-height: 63px;
+  padding: 7px 14px;
+  border: 1px solid #E6E9EE;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #283044;
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 18px;
+  line-height: 1.15;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.2s ease, background 0.2s ease;
+}
+.spec-all-chunk-option:active {
+  transform: scale(0.97);
+}
+.spec-all-chunk-option.wrong {
+  border-color: #F23E3E;
+  background: #FBC0C0;
+  animation: specWrongShake 0.5s ease;
+}
+.spec-all-chunk-option .jp-label {
+  min-width: 42px;
+}
 .spec-slots {
   width: 361px;
   display: flex;
@@ -3649,6 +3704,78 @@ body {
 }
 .spec-regular-9876-oral-screen .spec-repeat-wave-floating {
   top: 18px;
+}
+.spec-follow-reading-screen .spec-content {
+  top: 30px;
+  bottom: 112px;
+}
+.spec-follow-reading-stack {
+  gap: 14px;
+  align-items: center;
+}
+.spec-follow-reading-card {
+  width: 361px;
+  min-height: 218px;
+  padding: 20px 18px 18px;
+  border: 2px solid #D9B7FF;
+  border-radius: 18px;
+  background: #FBF4FF;
+  color: #444764;
+  box-shadow: 0 0 0 8px rgba(217, 183, 255, 0.18);
+}
+.spec-follow-reading-title {
+  margin: 0 0 16px;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+.spec-follow-reading-target-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.spec-follow-reading-target-row .spec-audio-pair {
+  flex: 0 0 auto;
+}
+.spec-follow-reading-target {
+  min-width: 0;
+  flex: 1;
+  text-align: center;
+}
+.spec-follow-reading-romaji {
+  margin-bottom: 4px;
+  color: #8B8FA6;
+  font-size: 14px;
+  line-height: 1.35;
+}
+.spec-follow-reading-japanese {
+  padding-bottom: 7px;
+  border-bottom: 2px dotted #B7B9C7;
+  font-size: 20px;
+  line-height: 1.45;
+  font-weight: 600;
+}
+.spec-follow-reading-translation {
+  margin-top: 18px;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+}
+.spec-follow-reading-card.done .spec-follow-reading-japanese {
+  color: #13B98A;
+}
+.spec-follow-reading-screen .spec-repeat-record-area {
+  height: 134px;
+}
+.spec-follow-reading-screen .spec-repeat-record-zone {
+  top: 4px;
+}
+.spec-follow-reading-screen .spec-repeat-wave-floating {
+  display: none;
+}
+.spec-follow-reading-screen .spec-record-main.spec-repeat-record-main img {
+  width: 76px;
+  height: 76px;
 }
 .spec-repeat-record-scoring {
   display: flex;
@@ -4958,11 +5085,14 @@ body {
   margin: 0;
   color: #444764;
   font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   line-height: 1.55;
   text-align: left;
   white-space: pre-line;
+}
+.spec-explanation-body .spec-explanation-orange {
+  color: #F4772A;
 }
 .spec-explanation-token.blue {
   color: #4576F0;
@@ -4972,6 +5102,72 @@ body {
 }
 .spec-explanation-token.bold {
   font-weight: 700;
+}
+.spec-speech-explanation-card {
+  width: 361px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.spec-speech-explanation-tab {
+  min-width: 88px;
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 10px 10px 0 0;
+  background: #F4772A;
+  color: #FFFFFF;
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+}
+.spec-speech-explanation-panel {
+  width: 361px;
+  min-height: 80px;
+  padding: 16px 74px 16px 16px;
+  border-radius: 0 16px 16px 16px;
+  background: linear-gradient(108deg, #FFF3E8 0%, #FFE0DC 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.spec-speech-explanation-body {
+  margin: 0;
+  color: #444764;
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.55;
+  text-align: left;
+}
+.spec-speech-explanation-body strong {
+  color: #F4772A;
+  font-weight: 500;
+}
+.spec-speech-explanation-play {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  background: #FFFFFF;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.spec-speech-explanation-play::before {
+  content: "";
+  width: 0;
+  height: 0;
+  margin-left: 4px;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 14px solid #F4772A;
 }
 .spec-grammar-builder-screen {
   --grammar-content-left: calc((100% - 361px) / 2);
@@ -6332,6 +6528,13 @@ body.demo-body {
   font-weight: 500;
   letter-spacing: .02em;
 }
+.spec-context-stem .jp-label {
+  color: #4576F0;
+  font-weight: 700;
+}
+.spec-context-stem .jp-reading {
+  color: #697386;
+}
 .demo-completion .spec-content {
   top: 120px;
   bottom: 120px;
@@ -6412,8 +6615,8 @@ body.demo-body {
 <div class="demo-root">
   <main id="entryView" class="demo-entry">
     <div>
-      <h1 class="demo-entry-title">日语 - 谈论健身</h1>
-      <p class="demo-entry-subtitle">Unit 1 - 器械与训练区域</p>
+      <h1 class="demo-entry-title">日语 - 谈论日本交通</h1>
+      <p class="demo-entry-subtitle">Unit 2 - 常见铁路类型</p>
     </div>
     <div class="demo-lesson-entry-list" aria-label="课程入口">
       <button class="demo-lesson-card" type="button" data-level="1">
@@ -6481,7 +6684,7 @@ const SPEC_ASSETS = {
   dialogueAvatarA: ASSETS.avatarA,
   dialogueAvatarB: ASSETS.avatarB
 };
-const V10_UNLOCK_KEY = 'jp-gym-demo-v11-unlocked-level';
+const V10_UNLOCK_KEY = 'jp-transport-demo-v1-unlocked-level';
 const state = { version: null, steps: [], index: 0, activeAudio: null, listeningSkipFromIndex: null, completedSteps: new Set(), unlockedLevel: 1, devPreview: false, boardResizeStates: new Map() };
 state.score = { correct: 0, total: 0, seen: new Set() };
 let _specActiveAudio = null;
@@ -6813,6 +7016,92 @@ function _specEscape(value) {
   return String(value ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 }
 const JP_ROMAJI = {
+  "私鉄": "shitetsu",
+  "私": "shi",
+  "鉄": "tetsu",
+  "に": "ni",
+  "乗ります": "norimasu",
+  "に乗ります": "ni norimasu",
+  "私鉄に乗ります": "shitetsu ni norimasu",
+  "新幹線": "shinkansen",
+  "新幹": "shinkan",
+  "新幹線に乗ります": "shinkansen ni norimasu",
+  "地下鉄": "chikatetsu",
+  "地下": "chika",
+  "線": "sen",
+  "地下鉄に乗ります": "chikatetsu ni norimasu",
+  "銀座線": "ginza-sen",
+  "銀座": "ginza",
+  "銀座線に乗ります": "ginza-sen ni norimasu",
+  "横浜": "yokohama",
+  "横浜へは": "yokohama e wa",
+  "京都": "kyōto",
+  "京都へは": "kyōto e wa",
+  "銀座へは": "ginza e wa",
+  "浅草": "asakusa",
+  "浅草へは": "asakusa e wa",
+  "へは": "e wa",
+  "横浜へは私鉄に乗ります。": "yokohama e wa shitetsu ni norimasu",
+  "京都へは新幹線に乗ります。": "kyōto e wa shinkansen ni norimasu",
+  "銀座へは地下鉄に乗ります。": "ginza e wa chikatetsu ni norimasu",
+  "浅草へは銀座線に乗ります。": "asakusa e wa ginza-sen ni norimasu",
+  "センス": "sensu",
+  "セン": "sen",
+  "ス": "su",
+  "服": "fuku",
+  "服の": "fuku no",
+  "服のセンス": "fuku no sensu",
+  "笑顔": "egao",
+  "笑": "e",
+  "顔": "gao",
+  "優しい": "yasashii",
+  "優しい笑顔": "yasashii egao",
+  "雰囲気": "fun'iki",
+  "雰": "fun",
+  "囲気": "'iki",
+  "明るい": "akarui",
+  "明るい雰囲気": "akarui fun'iki",
+  "が": "ga",
+  "が素敵ですね": "ga suteki desu ne",
+  "ありがとう": "arigatō",
+  "素敵ですね": "suteki desu ne",
+  "服のセンスが": "fuku no sensu ga",
+  "優しい笑顔が": "yasashii egao ga",
+  "明るい雰囲気が": "akarui fun'iki ga",
+  "服のセンスが素敵ですね。": "fuku no sensu ga suteki desu ne",
+  "優しい笑顔が素敵ですね。": "yasashii egao ga suteki desu ne",
+  "明るい雰囲気が素敵ですね。": "akarui fun'iki ga suteki desu ne",
+  "行きます": "ikimasu",
+  "映画": "eiga",
+  "映画に": "eiga ni",
+  "映画に行きます": "eiga ni ikimasu",
+  "公園": "kōen",
+  "公園に": "kōen ni",
+  "公園に行きます": "kōen ni ikimasu",
+  "飲みます": "nomimasu",
+  "お茶": "ocha",
+  "お茶を": "ocha o",
+  "お茶を飲みます": "ocha o nomimasu",
+  "一杯": "ippai",
+  "一杯飲みます": "ippai nomimasu",
+  "会います": "aimasu",
+  "週末": "shūmatsu",
+  "週末に": "shūmatsu ni",
+  "週末に会います": "shūmatsu ni aimasu",
+  "カフェ": "kafe",
+  "カフェで": "kafe de",
+  "カフェで会います": "kafe de aimasu",
+  "に": "ni",
+  "で": "de",
+  "行きませんか": "ikimasen ka",
+  "飲みませんか": "nomimasen ka",
+  "会いませんか": "aimasen ka",
+  "映画に行きませんか。": "eiga ni ikimasen ka",
+  "公園に行きませんか。": "kōen ni ikimasen ka",
+  "お茶を飲みませんか。": "ocha o nomimasen ka",
+  "一杯飲みませんか。": "ippai nomimasen ka",
+  "週末に会いませんか。": "shūmatsu ni aimasen ka",
+  "カフェで会いませんか。": "kafe de aimasen ka",
   "その": "sono",
   "この": "kono",
   "プレート": "purēto",
@@ -6843,6 +7132,92 @@ const JP_ROMAJI = {
   "ゆっくり": "yukkuri"
 };
 const JP_AUDIO_KEYS = {
+  "私鉄": "jp-transport-shitetsu",
+  "私": "jp-transport-shi",
+  "鉄": "jp-transport-tetsu",
+  "に": "jp-transport-ni",
+  "乗ります": "jp-transport-norimasu",
+  "に乗ります": "jp-transport-ni-norimasu",
+  "私鉄に乗ります": "jp-transport-shitetsu-ni-norimasu",
+  "新幹線": "jp-transport-shinkansen",
+  "新幹": "jp-transport-shinkan",
+  "新幹線に乗ります": "jp-transport-shinkansen-ni-norimasu",
+  "地下鉄": "jp-transport-chikatetsu",
+  "地下": "jp-transport-chika",
+  "線": "jp-transport-sen",
+  "地下鉄に乗ります": "jp-transport-chikatetsu-ni-norimasu",
+  "銀座線": "jp-transport-ginza-sen",
+  "銀座": "jp-transport-ginza",
+  "銀座線に乗ります": "jp-transport-ginza-sen-ni-norimasu",
+  "横浜": "jp-transport-yokohama",
+  "横浜へは": "jp-transport-yokohama-e-wa",
+  "京都": "jp-transport-kyoto",
+  "京都へは": "jp-transport-kyoto-e-wa",
+  "銀座へは": "jp-transport-ginza-e-wa",
+  "浅草": "jp-transport-asakusa",
+  "浅草へは": "jp-transport-asakusa-e-wa",
+  "へは": "jp-transport-e-wa",
+  "横浜へは私鉄に乗ります。": "jp-transport-yokohama-e-wa-shitetsu-ni-norimasu",
+  "京都へは新幹線に乗ります。": "jp-transport-kyoto-e-wa-shinkansen-ni-norimasu",
+  "銀座へは地下鉄に乗ります。": "jp-transport-ginza-e-wa-chikatetsu-ni-norimasu",
+  "浅草へは銀座線に乗ります。": "jp-transport-asakusa-e-wa-ginza-sen-ni-norimasu",
+  "センス": "jp-compliment-sensu",
+  "セン": "jp-compliment-sen",
+  "ス": "jp-compliment-su",
+  "服の": "jp-compliment-fuku-no",
+  "服のセンス": "jp-compliment-fuku-no-sensu",
+  "笑顔": "jp-compliment-egao",
+  "笑": "jp-compliment-e",
+  "顔": "jp-compliment-gao",
+  "優しい": "jp-compliment-yasashii",
+  "優しい笑顔": "jp-compliment-yasashii-egao",
+  "雰囲気": "jp-compliment-funiki",
+  "雰": "jp-compliment-fun",
+  "囲気": "jp-compliment-iki",
+  "明るい": "jp-compliment-akarui",
+  "明るい雰囲気": "jp-compliment-akarui-funiki",
+  "が": "jp-compliment-ga",
+  "が素敵ですね": "jp-compliment-ga-suteki-desu-ne",
+  "ありがとう": "jp-compliment-arigato",
+  "素敵ですね": "jp-compliment-suteki-desu-ne",
+  "服のセンスが": "jp-compliment-fuku-no-sensu-ga",
+  "優しい笑顔が": "jp-compliment-yasashii-egao-ga",
+  "明るい雰囲気が": "jp-compliment-akarui-funiki-ga",
+  "服のセンスが素敵ですね。": "jp-compliment-fuku-no-sensu-ga-suteki-desu-ne",
+  "優しい笑顔が素敵ですね。": "jp-compliment-yasashii-egao-ga-suteki-desu-ne",
+  "明るい雰囲気が素敵ですね。": "jp-compliment-akarui-funiki-ga-suteki-desu-ne",
+  "行きます": "jp-date-ikimasu",
+  "映画": "jp-date-eiga",
+  "映画に": "jp-date-eiga-ni",
+  "映画に行きます": "jp-date-eiga-ni-ikimasu",
+  "公園": "jp-date-koen",
+  "公園に": "jp-date-koen-ni",
+  "公園に行きます": "jp-date-koen-ni-ikimasu",
+  "飲みます": "jp-date-nomimasu",
+  "お茶": "jp-date-ocha",
+  "お茶を": "jp-date-ocha-o",
+  "お茶を飲みます": "jp-date-ocha-o-nomimasu",
+  "一杯": "jp-date-ippai",
+  "一杯飲みます": "jp-date-ippai-nomimasu",
+  "会います": "jp-date-aimasu",
+  "週末": "jp-date-shumatsu",
+  "週末に": "jp-date-shumatsu-ni",
+  "週末に会います": "jp-date-shumatsu-ni-aimasu",
+  "カフェ": "jp-date-kafe",
+  "カフェで": "jp-date-kafe-de",
+  "カフェで会います": "jp-date-kafe-de-aimasu",
+  "に": "jp-transport-ni",
+  "を": "jp-date-o",
+  "で": "jp-date-de",
+  "行きませんか": "jp-date-ikimasen-ka",
+  "飲みませんか": "jp-date-nomimasen-ka",
+  "会いませんか": "jp-date-aimasen-ka",
+  "映画に行きませんか。": "jp-date-eiga-ni-ikimasen-ka",
+  "公園に行きませんか。": "jp-date-koen-ni-ikimasen-ka",
+  "お茶を飲みませんか。": "jp-date-ocha-o-nomimasen-ka",
+  "一杯飲みませんか。": "jp-date-ippai-nomimasen-ka",
+  "週末に会いませんか。": "jp-date-shumatsu-ni-aimasen-ka",
+  "カフェで会いませんか。": "jp-date-kafe-de-aimasen-ka",
   "そのプレートは重いですか。": "jp-sono-pureto-wa-omoi-desu-ka",
   "大きいプレート": "jp-okii-pureto",
   "小さいプレート": "jp-chiisai-pureto",
@@ -7847,10 +8222,13 @@ function renderContextMeaning(container, data) {
   const options = _shuffleNotSame(data.options);
   const render = () => {
     const complete = answerState === 'complete';
-    const sceneHTML = imageScene(data, _specHighlightPhraseHTML(data.sentence, data.phrase), introComplete ? '' : 'context-intro-card');
-    const fillingHTML = complete ? `<span class="spec-word-answer-final">${_specEscape(data.correct)}</span>` : '';
-    const optionsHTML = complete ? '' : options.map((option,index) => _specChoice2HTML(option,index, wrongIndex === index ? 'wrong' : '')).join('');
-    _specShell(container, { exerciseId: data.id, progress: stepProgress(), screenClass: boardJustRevealed ? 'spec-context-board-ready' : '', showContinue: complete, sceneHTML, bodyHTML: `<div class="spec-main-stack"><p class="spec-context-stem"><span class="spec-context-key">${_specEscape(data.phrase)}</span> 在这里的意思是：</p><div class="spec-context-audio-line ${complete ? 'final' : ''}"><div class="spec-context-underline">${fillingHTML}</div></div>${optionsHTML ? `<div class="spec-choice-list">${optionsHTML}</div>` : ''}</div>` });
+    const sceneLabelHTML = data.sentence === data.phrase
+      ? _specJPDisplayHTML(data.phrase, 'label')
+      : _specHighlightPhraseHTML(data.sentence, data.phrase);
+    const sceneHTML = imageScene(data, sceneLabelHTML, introComplete ? '' : 'context-intro-card');
+    const answerLineHTML = complete ? '' : '<div class="spec-context-audio-line"><div class="spec-context-underline"></div></div>';
+    const optionsHTML = options.map((option,index) => _specChoice2HTML(option,index, complete && option === data.correct ? 'correct' : wrongIndex === index ? 'wrong' : '')).join('');
+    _specShell(container, { exerciseId: data.id, progress: stepProgress(), screenClass: boardJustRevealed ? 'spec-context-board-ready' : '', showContinue: complete, sceneHTML, bodyHTML: `<div class="spec-main-stack"><p class="spec-context-stem"><span class="spec-context-key">${_specEscape(data.phrase)}</span> 在这里的意思是：</p>${answerLineHTML}<div class="spec-choice-list">${optionsHTML}</div>${complete ? _specSpeechExplanationHTML(data.explanation, data.phrase) : ''}</div>` });
     boardJustRevealed = false;
     if (!autoPlayed) {
       autoPlayed = true;
@@ -7874,7 +8252,7 @@ function renderSpelling(container, data) {
     const done = allFilled && completeReady;
     const poolHTML = optionItems.map(item => _specPillHTML(item.label, item.index, used.has(item.index) || wrongIndex === item.index ? 'hollow' : '')).join('');
     const slotHTML = `<div class="spec-spelling-line">${_specAudioHTML(data.fullPhrase)}<div class="spec-spelling-slots">${data.chunks.map((chunk,index) => { const slot = slotStates[index]; return `<div class="spec-spelling-slot ${!slot && index === current ? 'active' : ''}">${slot ? `<div class="spec-slot-token ${slot.state}">${_specJPDisplayHTML(slot.text, 'label')}</div>` : '<div class="spec-spelling-slot-line"></div>'}</div>`; }).join('')}</div></div>`;
-    _specShell(container, { exerciseId: data.id, progress: stepProgress(), showContinue: done, sceneHTML: imageScene({ ...data, sentence: data.fullPhrase }, _specEscape(data.translation), 'demo-vocab-card'), bodyHTML: `<div class="spec-main-stack"><p class="spec-stem">请翻译：</p>${done ? _specCompleteSentenceHTML(data.fullPhrase, data.gloss || {}, true, data.lookupUnits || []) : slotHTML}${allFilled ? '' : `<div class="spec-option-pool">${poolHTML}</div>`}</div>` });
+    _specShell(container, { exerciseId: data.id, progress: stepProgress(), showContinue: done, sceneHTML: imageScene({ ...data, sentence: data.fullPhrase }, _specEscape(data.translation), 'demo-vocab-card'), bodyHTML: `<div class="spec-main-stack"><p class="spec-stem">请翻译：</p>${done ? `${_specCompleteSentenceHTML(data.fullPhrase, data.gloss || {}, true, data.lookupUnits || [])}${_specSpeechExplanationHTML(data.explanation, data.fullPhrase)}` : slotHTML}${allFilled ? '' : `<div class="spec-option-pool">${poolHTML}</div>`}</div>` });
     if (!initialFullPlayed) {
       initialFullPlayed = true;
       _playSoon(data.fullPhrase, 420);
@@ -8109,12 +8487,25 @@ function _specGrammarOptionText(option) {
 }
 function _specGrammarExplanationHTML(explanation) {
   if (!explanation) return '';
-  const data = typeof explanation === 'string' ? { tab: '语法词汇讲解', blocks: [{ type: 'body', text: explanation }] } : { tab: '语法词汇讲解', blocks: [], ...explanation };
+  const data = typeof explanation === 'string' ? { tab: '句子语法讲解', blocks: [{ type: 'body', text: explanation }] } : { tab: '句子语法讲解', blocks: [], ...explanation };
   const blockHTML = data.html
-    ? `<p class="spec-explanation-body">${data.html}</p>`
+    ? `<div class="spec-explanation-body">${data.html}</div>`
     : (Array.isArray(data.blocks) ? data.blocks : []).map(_specExplanationBlockHTML).join('');
   if (!blockHTML) return '';
   return `<section class="spec-explanation-card" aria-label="${_specEscape(data.tab)}"><div class="spec-explanation-tab">${_specEscape(data.tab)}</div><div class="spec-explanation-panel">${blockHTML}</div></section>`;
+}
+function _specSpeechExplanationHTML(explanation, audioText) {
+  if (!explanation) return '';
+  const data = typeof explanation === 'string' ? { html: explanation } : explanation;
+  const bodyHTML = data.html
+    ? data.html
+    : (Array.isArray(data.blocks) ? data.blocks : []).map(_specExplanationBlockHTML).join('');
+  if (!bodyHTML) return '';
+  const safeAudio = _specEscape(audioText || '');
+  const playHTML = safeAudio
+    ? `<button class="spec-speech-explanation-play" type="button" data-spec-say="${safeAudio}" aria-label="播放讲解词语"></button>`
+    : '';
+  return `<section class="spec-speech-explanation-card" aria-label="词汇讲解"><div class="spec-speech-explanation-tab">词汇讲解</div><div class="spec-speech-explanation-panel"><div class="spec-speech-explanation-body">${bodyHTML}</div>${playHTML}</div></section>`;
 }
 function renderGrammarExposure(container, data) {
   if (data.cardOnly) {
@@ -8460,7 +8851,7 @@ function renderTwoOption(container, data) {
     const activeOptions = allFilled ? [] : optionOrders[current];
     const optionsHTML = allFilled ? '' : activeOptions.map((option,index) => _specChoice2HTML(option,index, wrongIndex === index ? 'wrong' : '')).join('');
     const promptHTML = data.promptSegments ? _specChineseLookupHTML(data.promptSegments) : _specEscape(data.prompt);
-    const explanationHTML = '';
+    const explanationHTML = done ? _specGrammarExplanationHTML(data.explanation) : '';
     const sentenceSlotHTML = () => {
       if (!data.sentenceStart && !data.sentenceEnd) return _specSlotsHTML(data.groups.map(g => ({zh:g.zh, answer:g.correct})), slotStates, current);
       const slot = slotStates[current] || slotStates[0];
@@ -8493,6 +8884,80 @@ function renderTwoOption(container, data) {
         setTimeout(() => {
           slotStates[current] = null;
           wrongIndex = null;
+          render();
+        }, 520);
+      }
+      render();
+    }));
+  };
+  render();
+}
+function renderAllCorrectChunks(container, data) {
+  const groups = Array.isArray(data.groups) ? data.groups : [];
+  const prefilled = new Set((data.prefilledIndexes || []).filter(index => index >= 0 && index < groups.length));
+  const slotStates = groups.map((group, index) => prefilled.has(index)
+    ? { state: 'correct', text: group.correct, displayText: group.correct }
+    : null);
+  const selectableIndexes = groups.map((_, index) => index).filter(index => !prefilled.has(index));
+  const configuredOrder = (data.optionOrder || []).map(answer => groups.findIndex((group, index) => !prefilled.has(index) && group.correct === answer));
+  const optionIndexes = [...configuredOrder, ...selectableIndexes].filter((index, position, list) => index >= 0 && list.indexOf(index) === position);
+  let remainingIndexes = [...optionIndexes];
+  let wrongGroupIndex = null;
+  let completeReady = false;
+  let fullPlayed = false;
+  let completeTimer = null;
+  let wrongTimer = null;
+  const currentIndex = () => slotStates.findIndex(slot => !slot);
+  const slots = groups.map(group => ({ zh: group.zh, answer: group.correct }));
+  const optionHTML = groupIndex => {
+    const state = wrongGroupIndex === groupIndex ? 'wrong' : '';
+    const label = groups[groupIndex]?.correct || '';
+    return `<button class="spec-all-chunk-option ${state}" type="button" data-chunk-group-index="${groupIndex}" aria-label="选择 ${_specEscape(label)}">${_specJPDisplayHTML(label, 'label')}</button>`;
+  };
+  const render = () => {
+    const activeIndex = currentIndex();
+    const allFilled = activeIndex < 0;
+    const done = allFilled && completeReady;
+    const promptHTML = data.promptSegments ? _specChineseLookupHTML(data.promptSegments) : _specEscape(data.prompt || '');
+    const explanationHTML = done ? _specGrammarExplanationHTML(data.explanation) : '';
+    const slotsHTML = _specSlotsHTML(slots, slotStates, activeIndex, { showHints: true, endPunctuation: '。' });
+    const optionsHTML = remainingIndexes.map(optionHTML).join('');
+    const buildingHTML = `<div class="spec-all-chunk-answer-area">${slotsHTML}</div>${allFilled ? '' : `<div class="spec-all-chunk-options" aria-label="正确组块选项">${optionsHTML}</div>`}`;
+    _specShell(container, {
+      exerciseId: data.id,
+      progress: stepProgress(),
+      showContinue: done,
+      screenClass: 'spec-all-correct-chunks-screen',
+      bodyHTML: `<div class="spec-main-stack spec-all-chunk-builder">${_specTopicCardHTML(promptHTML, false, true)}${done ? `${_specCompleteSentenceHTML(data.fullSentence, data.gloss || {}, true, data.lookupUnits || [])}${explanationHTML}` : buildingHTML}</div>`
+    });
+    if (done && !fullPlayed) {
+      fullPlayed = true;
+      _playSoon(data.fullSentence, 300);
+    }
+    if (allFilled) return;
+    container.querySelectorAll('[data-chunk-group-index]').forEach(button => button.addEventListener('click', () => {
+      if (wrongGroupIndex !== null) return;
+      const groupIndex = Number(button.dataset.chunkGroupIndex);
+      const option = groups[groupIndex]?.correct || '';
+      _specPlayAudio(option, false);
+      if (groupIndex === activeIndex) {
+        slotStates[groupIndex] = { state: 'correct', text: option, displayText: option };
+        remainingIndexes = remainingIndexes.filter(index => index !== groupIndex);
+        wrongGroupIndex = null;
+        if (currentIndex() < 0) {
+          recordAttempt(data, true);
+          clearTimeout(completeTimer);
+          completeTimer = setTimeout(() => {
+            completeReady = true;
+            render();
+          }, 520);
+        }
+      } else {
+        recordAttempt(data, false);
+        wrongGroupIndex = groupIndex;
+        clearTimeout(wrongTimer);
+        wrongTimer = setTimeout(() => {
+          wrongGroupIndex = null;
           render();
         }, 520);
       }
@@ -9002,6 +9467,7 @@ function renderOralTranslation(container, data) {
 function renderRegular9876Oral(container, data) {
   let mode = data.startMode || 'record';
   let recordState = 'idle';
+  let entryAutoPlayed = false;
   let optionItems = buildOptionItems();
   const slotStates = data.chunks.map(() => null);
   const used = new Set();
@@ -9013,6 +9479,8 @@ function renderRegular9876Oral(container, data) {
   let selectShakeWrong = false;
   let selectFeedbackTimer = null;
   let selectResetTimer = null;
+  let chunkFeedbackTimer = null;
+  let chunkFeedbackLocked = false;
   let activeSlot = 0;
   const punctuation = _specChunkPunctuation(data.fullSentence, data.chunks);
   const correctChunks = data.chunks.map(chunk => chunk.answer);
@@ -9039,12 +9507,27 @@ function renderRegular9876Oral(container, data) {
   const activeRecordFeedbackMode = () => {
     if (data.prototypeFeedbackMode === 'partial' || data.prototypeFeedbackMode === 'full') return data.prototypeFeedbackMode;
     if (recordState !== 'done') return null;
+    if (data.followReading) return 'full';
     const questionNumber = oralQuestionNumber();
     if ((questionNumber === 13 || questionNumber === 14) && recordAttemptCount <= 1) return 'partial';
     if (questionNumber === 13 || questionNumber === 14 || questionNumber === 15) return 'full';
     return null;
   };
   const topicHTML = () => _specTopicCardHTML(_specChineseLookupHTML(data.promptSegments || []), false, true);
+  const followReadingHTML = () => {
+    const romaji = JP_ROMAJI[String(data.fullSentence || '')] || '';
+    return `<section class="spec-follow-reading-card ${recordState === 'done' ? 'done' : ''}" aria-label="跟读题面">
+      <p class="spec-follow-reading-title">请跟读：</p>
+      <div class="spec-follow-reading-target-row">
+        ${_specAudioHTML(data.fullSentence, true)}
+        <div class="spec-follow-reading-target">
+          <div class="spec-follow-reading-romaji">${_specEscape(romaji)}</div>
+          <div class="spec-follow-reading-japanese">${_specEscape(data.fullSentence)}</div>
+        </div>
+      </div>
+      <div class="spec-follow-reading-translation">${_specChineseLookupHTML(data.promptSegments || [])}</div>
+    </section>`;
+  };
   const completeSentenceHTML = () => _specCompleteSentenceHTML(data.fullSentence, data.gloss || {}, true, data.lookupUnits || []);
   const sentenceClozeTokens = () => {
     if (!sentenceClozeWords) return [];
@@ -9062,7 +9545,7 @@ function renderRegular9876Oral(container, data) {
   const sentenceClozeTail = tokens => _specEscape(String(data.fullSentence || '').slice(tokens.reduce((cursor, word) => cursor + String(word.prefix || '').length + String(word.label || '').length, 0)));
   const visibleStates = () => slotStates.map((slot,index) => {
     if (!slot) return null;
-    if (!submitted) return { ...slot, state: 'selected' };
+    if (!submitted) return { ...slot, state: slot.state || 'selected' };
     return { ...slot, state: slot.text === correctChunks[index] ? 'correct' : 'wrong', trailingPunctuation: data.fixedTail ? '' : punctuation[index] || '' };
   });
   const reviewHTML = states => `<div class="spec-select-review">${completeSentenceHTML()}${_specSlotsHTML(states.map(item => ({ zh: '', answer: item?.text || '' })), states, data.chunks.length, { showHints: false, submitted: true })}</div>`;
@@ -9126,7 +9609,10 @@ function renderRegular9876Oral(container, data) {
     if (recordState === 'scoring') {
       return `<div class="spec-repeat-record-area spec-repeat-record-scoring"><div class="spec-record-scoring-spinner" aria-label="评分中"></div></div>`;
     }
-    if (recordState === 'done') return `<div class="spec-record-panel done"><p class="demo-record-feedback-title">口语回答反馈：</p>${recordSentenceFeedbackHTML()}</div>`;
+    if (recordState === 'done') {
+      if (data.followReading) return '';
+      return `<div class="spec-record-panel done"><p class="demo-record-feedback-title">口语回答反馈：</p>${recordSentenceFeedbackHTML()}</div>`;
+    }
     return `<div class="spec-repeat-record-area"><div class="spec-repeat-record-zone"><button class="spec-record-main spec-repeat-record-main" type="button" data-regular-oral-record="start" aria-label="开始录音"><img src="${SPEC_ASSETS.recordStart}" alt=""></button><div class="spec-record-prompt">点击录音</div></div></div>`;
   };
   const recordBottomHTML = () => {
@@ -9136,6 +9622,8 @@ function renderRegular9876Oral(container, data) {
     return `<div class="spec-record-actions stacked"><button class="spec-repeat-skip-text" type="button" data-regular-oral-record="defer">现在不做口语题</button><button class="spec-record-retry-wide" type="button" data-regular-oral-record="retry"><span class="spec-record-retry-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3Z" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 11v1a7 7 0 0 0 14 0v-1" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 19v3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M8 22h8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>点击重录</button></div>`;
   };
   const resetSelectAnswer = () => {
+    clearTimeout(chunkFeedbackTimer);
+    chunkFeedbackLocked = false;
     slotStates.fill(null);
     used.clear();
     submitted = false;
@@ -9147,11 +9635,14 @@ function renderRegular9876Oral(container, data) {
     render();
   };
   const renderRecord = () => {
+    const recordBody = data.followReading
+      ? `<div class="spec-main-stack spec-follow-reading-stack">${followReadingHTML()}${recordCenterHTML()}</div>`
+      : `<div class="spec-main-stack spec-repeat-stack"><p class="spec-stem">请翻译：</p>${topicHTML()}${recordCenterHTML()}</div>`;
     _specShell(container, {
       exerciseId: data.id,
       progress: stepProgress(),
-      screenClass: 'spec-regular-9876-oral-screen',
-      bodyHTML: `<div class="spec-main-stack spec-repeat-stack"><p class="spec-stem">请翻译：</p>${topicHTML()}${recordCenterHTML()}</div>`,
+      screenClass: `spec-regular-9876-oral-screen ${data.followReading ? 'spec-follow-reading-screen' : ''}`,
+      bodyHTML: recordBody,
       bottomHTML: recordBottomHTML(),
       bottomClass: recordState === 'done' && recordAllCorrect() ? '' : `repeat ${recordState}`,
       skipContinueBinding: true
@@ -9189,6 +9680,10 @@ function renderRegular9876Oral(container, data) {
       }
       render();
     }));
+    if (data.followReading && data.autoPlayOnEnter && !entryAutoPlayed) {
+      entryAutoPlayed = true;
+      _playSoon(data.fullSentence, 420);
+    }
   };
   const submitSelectAnswer = () => {
     if (!allFilled() || submitted) return;
@@ -9210,8 +9705,8 @@ function renderRegular9876Oral(container, data) {
   const renderSelect = () => {
     const correct = submitted && allCorrect();
     const states = visibleStates().map(slot => slot && submitted && slot.state === 'wrong' && selectShakeWrong ? { ...slot, state: 'wrong shake' } : slot);
-    const completeHTML = correct && completeReady ? completeSentenceHTML() : '';
-    const slotHTML = _specSlotsHTML(data.chunks, states, Math.max(0,currentSlot()), { showHints: false, canRemove: true, submitted, endPunctuation: data.fixedTail ? ',' : '' });
+    const completeHTML = correct && completeReady ? `${completeSentenceHTML()}${_specGrammarExplanationHTML(data.explanation)}` : '';
+    const slotHTML = _specSlotsHTML(data.chunks, states, Math.max(0,currentSlot()), { showHints: true, canRemove: !data.instantChunkFeedback, submitted, endPunctuation: data.fixedTail ? ',' : '' });
     const clozeHTML = data.fixedTail
       ? `<div class="spec-regular-cloze-row">${slotHTML}<span class="spec-regular-cloze-fixed">${_specEscape(data.fixedTail)}</span></div>`
       : sentenceClozeWordIndexToSlot ? sentenceClozeHTML(states) : slotHTML;
@@ -9238,7 +9733,35 @@ function renderRegular9876Oral(container, data) {
         const empty = currentSlot();
         if (empty < 0) return;
         const item = optionItems.find(o => o.index === idx);
+        if (data.instantChunkFeedback && chunkFeedbackLocked) return;
         _specPlayAudio(item.label, false);
+        if (data.instantChunkFeedback) {
+          const correctChunk = item.label === correctChunks[empty];
+          chunkFeedbackLocked = true;
+          slotStates[empty] = {
+            state: correctChunk ? 'correct' : 'wrong shake',
+            text: item.label,
+            optionIndex: idx
+          };
+          used.add(idx);
+          render();
+          clearTimeout(chunkFeedbackTimer);
+          chunkFeedbackTimer = setTimeout(() => {
+            chunkFeedbackLocked = false;
+            if (!correctChunk) {
+              used.delete(idx);
+              slotStates[empty] = null;
+              activeSlot = empty;
+              render();
+              return;
+            }
+            const nextEmpty = firstEmptySlot();
+            if (nextEmpty >= 0) activeSlot = nextEmpty;
+            if (allFilled()) submitSelectAnswer();
+            else render();
+          }, correctChunk ? 420 : 620);
+          return;
+        }
         slotStates[empty] = { state: 'selected', text: item.label, optionIndex: idx };
         used.add(idx);
         const nextEmpty = firstEmptySlot();
@@ -10213,7 +10736,7 @@ function renderListeningChoiceTranscript(container, data) {
 function renderDialogueListening(container, data) {
   renderListeningBase(container, data, { sceneMode: 'dialogue' });
 }
-const RENDERERS = { contextMeaning: renderContextMeaning, spelling: renderSpelling, sentenceMeaning: renderSentenceMeaning, singleBlankTranslation: renderSingleBlankTranslation, explanation: renderExplanation, grammarExposure: renderGrammarExposure, grammarBuilder: renderGrammarBuilder, grammarSkeletonBuilder: renderGrammarSkeletonBuilder, textContextMeaning: renderTextContextMeaning, twoOption: renderTwoOption, conditionTwoOption: renderConditionTwoOption, scenario: renderScenario, repeat: renderRepeat, oralTranslation: renderOralTranslation, regular9876Oral: renderRegular9876Oral, regular9876Select: renderRegular9876Oral, fallbackScenario: renderFallbackScenario, readingCloze9876: renderReadingCloze9876, listening9876: renderListening9876, listeningChoice: renderListeningChoice, listeningChoiceTranscript: renderListeningChoiceTranscript, dialogueListening: renderDialogueListening };
+const RENDERERS = { contextMeaning: renderContextMeaning, spelling: renderSpelling, sentenceMeaning: renderSentenceMeaning, singleBlankTranslation: renderSingleBlankTranslation, explanation: renderExplanation, grammarExposure: renderGrammarExposure, grammarBuilder: renderGrammarBuilder, grammarSkeletonBuilder: renderGrammarSkeletonBuilder, textContextMeaning: renderTextContextMeaning, twoOption: renderTwoOption, allCorrectChunks: renderAllCorrectChunks, conditionTwoOption: renderConditionTwoOption, scenario: renderScenario, repeat: renderRepeat, oralTranslation: renderOralTranslation, regular9876Oral: renderRegular9876Oral, regular9876Select: renderRegular9876Oral, fallbackScenario: renderFallbackScenario, readingCloze9876: renderReadingCloze9876, listening9876: renderListening9876, listeningChoice: renderListeningChoice, listeningChoiceTranscript: renderListeningChoiceTranscript, dialogueListening: renderDialogueListening };
 
 const Q = {
   q1: {
@@ -10889,7 +11412,7 @@ const COURSE_D = [
 ];
 
 const V5_GRAMMAR_EXPLANATION = {
-  tab: "语法词汇讲解",
+  tab: "句子语法讲解",
   blocks: [
     {
       type: "body",
@@ -11036,7 +11559,7 @@ const COURSE_V7_D = [
 ];
 
 const V8_WILL_EXPLANATION = {
-  tab: "语法词汇讲解",
+  tab: "句子语法讲解",
   blocks: [
     {
       type: "body",
@@ -11055,7 +11578,7 @@ const V8_WILL_EXPLANATION = {
 };
 
 const V8_CAN_EXPLANATION = {
-  tab: "语法词汇讲解",
+  tab: "句子语法讲解",
   blocks: [
     {
       type: "body",
@@ -11076,7 +11599,7 @@ const V8_CAN_EXPLANATION = {
 };
 
 const V8_MAY_EXPLANATION = {
-  tab: "语法词汇讲解",
+  tab: "句子语法讲解",
   blocks: [
     {
       type: "body",
@@ -11591,6 +12114,38 @@ const COURSE_V8_J = [
 ];
 
 const V10_GLOSS = {
+  "行きます": "去",
+  "映画": "电影",
+  "映画に": "去看电影",
+  "映画に行きます": "去看电影",
+  "公園": "公园",
+  "公園に": "去公园",
+  "公園に行きます": "去公园",
+  "飲みます": "喝",
+  "お茶": "茶",
+  "お茶を": "茶（动作对象）",
+  "お茶を飲みます": "喝茶",
+  "一杯": "一杯",
+  "一杯飲みます": "喝一杯",
+  "会います": "见面",
+  "週末": "周末",
+  "週末に": "在周末",
+  "週末に会います": "周末见面",
+  "カフェ": "咖啡馆",
+  "カフェで": "在咖啡馆",
+  "カフェで会います": "在咖啡馆见面",
+  "に": "表示去向或时间",
+  "を": "表示动作对象",
+  "で": "表示动作发生的地点",
+  "行きませんか": "要不要一起去",
+  "飲みませんか": "要不要一起喝",
+  "会いませんか": "要不要见面",
+  "映画に行きませんか。": "要不要一起去看电影？",
+  "公園に行きませんか。": "要不要一起去公园？",
+  "お茶を飲みませんか。": "要不要一起喝茶？",
+  "一杯飲みませんか。": "要不要一起喝一杯？",
+  "週末に会いませんか。": "周末要不要见面？",
+  "カフェで会いませんか。": "要不要在咖啡馆见面？",
   ...V8_GLOSS,
   book: "预订",
   "book a room": "预订一个房间",
@@ -11927,6 +12482,47 @@ const V10_GLOSS = {
 };
 
 Object.assign(V10_GLOSS, {
+  "私鉄": "私营铁路",
+  "私": "私营的（用于私鉄）",
+  "鉄": "铁路（用于私鉄）",
+  "に": "（助词）放在乘坐的交通工具或线路后面",
+  "乗ります": "乘坐；搭乘",
+  "に乗ります": "乘坐；搭乘",
+  "私鉄に乗ります": "乘坐私营铁路",
+  "新幹線": "新干线",
+  "新幹": "新干（用于新幹線）",
+  "新幹線に乗ります": "乘坐新干线",
+  "地下鉄": "地铁",
+  "地下": "地下（用于地下鉄）",
+  "線": "线路；线",
+  "地下鉄に乗ります": "乘坐地铁",
+  "銀座線": "银座线",
+  "銀座": "银座",
+  "銀座線に乗ります": "乘坐银座线",
+  "横浜": "横滨",
+  "横浜へは": "去横滨的话",
+  "京都": "京都",
+  "京都へは": "去京都的话",
+  "銀座へは": "去银座的话",
+  "浅草": "浅草",
+  "浅草へは": "去浅草的话",
+  "へは": "去……的话",
+  "センス": "品味；审美",
+  "服": "衣服",
+  "服の": "衣服的；穿衣方面的",
+  "服のセンス": "穿衣品味",
+  "笑顔": "笑容",
+  "優しい": "温柔的",
+  "優しい笑顔": "温柔的笑容",
+  "雰囲気": "氛围；给人的感觉",
+  "明るい": "明亮的；开朗的",
+  "明るい雰囲気": "开朗的气质",
+  "が": "助词，放在被赞美的内容后面",
+  "が素敵ですね": "很棒呢",
+  "素敵ですね": "很棒呢",
+  "服のセンスが": "穿衣品味（作为被赞美的内容）",
+  "優しい笑顔が": "温柔的笑容（作为被赞美的内容）",
+  "明るい雰囲気が": "开朗的气质（作为被赞美的内容）",
   "その": "那个",
   "この": "这个",
   "プレート": "杠铃片",
@@ -11949,6 +12545,28 @@ Object.assign(V10_GLOSS, {
 });
 
 const IMG = {
+  jpTransportPrivateRailway: "assets/images/jp-transport-level1/q01-private-railway.jpg",
+  jpTransportBoardPrivateRailway: "assets/images/jp-transport-level1/q03-board-private-railway.jpg",
+  jpTransportShinkansen: "assets/images/jp-transport-level1/q04-shinkansen-v2.jpg",
+  jpTransportBoardShinkansen: "assets/images/jp-transport-level1/q06-board-shinkansen-v2.jpg",
+  jpTransportSubway: "assets/images/jp-transport-level1/q07-subway-v2.jpg",
+  jpTransportBoardSubway: "assets/images/jp-transport-level1/q09-board-subway-v2.jpg",
+  jpTransportGinzaLine: "assets/images/jp-transport-level1/q07-ginza-line.jpg",
+  jpTransportBoardGinzaLine: "assets/images/jp-transport-level1/q09-board-ginza-line.jpg",
+  jpComplimentSenseMan: "assets/images/jp-dating-compliments-level1/q01-sense-man-v2.jpg",
+  jpComplimentFashionWoman: "assets/images/jp-dating-compliments-level1/q03-fashion-sense-woman-v2.jpg",
+  jpComplimentGentleSmile: "assets/images/jp-dating-compliments-level1/q02-gentle-smile.jpg",
+  jpComplimentAtmosphereScene: "assets/images/jp-dating-compliments-level1/q07-atmosphere-scene-v2.jpg",
+  jpComplimentBrightVibe: "assets/images/jp-dating-compliments-level1/q09-bright-vibe-v2.jpg",
+  jpDateIkimasu: "assets/images/jp-dating-level1/q01-ikimasu.jpg",
+  jpDateMovie: "assets/images/jp-dating-level1/q02-movie.jpg",
+  jpDatePark: "assets/images/jp-dating-level1/q03-park.jpg",
+  jpDateNomimasu: "assets/images/jp-dating-level1/q04-nomimasu.jpg",
+  jpDateTea: "assets/images/jp-dating-level1/q05-tea.jpg",
+  jpDateOneDrink: "assets/images/jp-dating-level1/q06-one-drink.jpg",
+  jpDateAimasu: "assets/images/jp-dating-level1/q07-aimasu.jpg",
+  jpDateWeekendMeet: "assets/images/jp-dating-level1/q08-weekend-meet.jpg",
+  jpDateCafeMeet: "assets/images/jp-dating-level1/q09-cafe-meet.jpg",
   bookRoom: "assets/images/v10-l1-q1-book-room-gen.webp",
   bookTickets: "assets/images/v10-l1-q3-book-two-tickets-gen.webp",
   saveMoney: "assets/images/v10-l1-q4-save-money-gen.webp",
@@ -12026,7 +12644,7 @@ function oralStep(id, section, prompt, sentence, chunks, options, acceptedAnswer
     fallback: scenarioFallback(id, prompt, sentence, chunks, options, acceptedAnswers)
   };
 }
-function regular9876OralStep(id, section, promptSegments, fullSentence, chunks, options) {
+function regular9876OralStep(id, section, promptSegments, fullSentence, chunks, options, explanation = null) {
   return {
     id,
     type: "regular9876Oral",
@@ -12037,8 +12655,16 @@ function regular9876OralStep(id, section, promptSegments, fullSentence, chunks, 
     lookupUnits: chunks.map(chunk => chunk.answer),
     chunks,
     options,
-    recordFeedback: repeatFeedback(fullSentence)
+    recordFeedback: repeatFeedback(fullSentence),
+    explanation
   };
+}
+function regular9876FollowStep(id, section, promptSegments, fullSentence, chunks, options, explanation = null) {
+  const step = regular9876OralStep(id, section, promptSegments, fullSentence, chunks, options, explanation);
+  step.followReading = true;
+  step.autoPlayOnEnter = true;
+  step.instantChunkFeedback = true;
+  return step;
 }
 function regular9876SelectStep(id, section, promptSegments, fullSentence, chunks, options, lookupUnits = null) {
   return {
@@ -12061,7 +12687,7 @@ function regular9876FrontHalfStep(id, section, promptSegments, fullSentence, chu
   return step;
 }
 const V10_CAN_MAY_EXPLANATION = {
-  tab: "语法词汇讲解",
+  tab: "句子语法讲解",
   blocks: [
     {
       type: "body",
@@ -12085,7 +12711,7 @@ const V10_CAN_MAY_EXPLANATION = {
   ]
 };
 const V10_CAN_EXPLANATION = {
-  tab: "语法词汇讲解",
+  tab: "句子语法讲解",
   blocks: [
     {
       type: "body",
@@ -12107,7 +12733,7 @@ const V10_CAN_EXPLANATION = {
   ]
 };
 const V10_MAY_EXPLANATION = {
-  tab: "语法词汇讲解",
+  tab: "句子语法讲解",
   blocks: [
     {
       type: "body",
@@ -12419,183 +13045,180 @@ const V11_LEVEL4_CORE = [
 
 const COURSE_V10_LEVEL_1 = [
   {
-    id: "jp_l1_q1_plate_meaning",
+    id: "jp_transport_l1_q1_chikatetsu_meaning",
     type: "contextMeaning",
     section: "第1关 · 词义 · 题1",
-    phrase: "プレート",
-    image: IMG.jpGymPlateMeaning,
-    sentence: "そのプレートは重いですか。",
-    options: ["杠铃片", "盘子"],
-    correct: "杠铃片",
-    analysis: "<strong>プレート</strong> 在健身房场景里表示“杠铃片”。<br><br>句意：那块杠铃片重吗？"
+    phrase: "地下鉄",
+    image: IMG.jpTransportSubway,
+    sentence: "地下鉄",
+    options: ["地铁", "咖啡馆"],
+    correct: "地铁",
+    explanation: { html: "<ul style=\"margin:0;padding-left:20px;\"><li><strong>地下鉄（chikatetsu）</strong>表示“地铁”。</li></ul>" }
   },
   {
-    id: "jp_l1_q2_large_plate_spelling",
+    id: "jp_transport_l1_q2_chikatetsu_spelling",
     type: "spelling",
     section: "第1关 · 拼写 · 题2",
-    image: IMG.jpGymLargePlate,
-    fullPhrase: "大きいプレート",
-    translation: "大号杠铃片",
+    image: IMG.jpTransportSubway,
+    fullPhrase: "地下鉄",
+    translation: "地铁",
     gloss: V10_GLOSS,
-    lookupUnits: ["大きい", "プレート"],
-    chunks: ["大きい", "プレート"],
-    options: ["大きい", "プレート"]
+    lookupUnits: ["地下鉄"],
+    chunks: ["地下", "鉄"],
+    options: ["地下", "鉄"]
   },
   {
-    id: "jp_l1_q3_small_plate_spelling",
+    id: "jp_transport_l1_q3_board_subway",
     type: "spelling",
     section: "第1关 · 拼写 · 题3",
-    image: IMG.jpGymSmallPlate,
-    fullPhrase: "小さいプレート",
-    translation: "小号杠铃片",
+    image: IMG.jpTransportBoardSubway,
+    fullPhrase: "地下鉄に乗ります",
+    translation: "乘坐地铁",
     gloss: V10_GLOSS,
-    lookupUnits: ["小さい", "プレート"],
-    chunks: ["小さい", "プレート"],
-    options: ["小さい", "プレート"]
+    lookupUnits: ["地下鉄", "に乗ります"],
+    chunks: ["地下鉄", "に乗ります"],
+    options: ["地下鉄", "に乗ります"],
+    explanation: { html: "<ul style=\"margin:0;padding-left:20px;\"><li style=\"margin-bottom:8px;\"><strong>乗ります（norimasu）</strong>表示“乘坐、搭乘”。</li><li style=\"margin-bottom:8px;\"><strong>に（ni）</strong>是助词，放在要乘坐的交通工具或线路后面。</li><li>结构：交通工具/具体线路 + <strong>に（ni）</strong> + <strong>乗ります（norimasu）</strong>，表示“乘坐......”。</li></ul>" }
   },
   {
-    id: "jp_l1_q4_dumbbell_meaning",
+    id: "jp_transport_l1_q4_shitetsu_meaning",
     type: "contextMeaning",
     section: "第1关 · 词义 · 题4",
-    phrase: "ダンベル",
-    image: IMG.jpGymDumbbellMeaning,
-    sentence: "ダンベルはどこですか。",
-    options: ["门铃", "哑铃"],
-    correct: "哑铃",
-    analysis: "<strong>ダンベル</strong> 表示“哑铃”。<br><br>句意：哑铃在哪里？"
+    phrase: "私鉄",
+    image: IMG.jpTransportPrivateRailway,
+    sentence: "私鉄",
+    options: ["私营铁路", "冰箱"],
+    correct: "私营铁路",
+    explanation: { html: "<ul style=\"margin:0;padding-left:20px;\"><li><strong>私鉄（shitetsu）</strong>是日本常见公共交通方式中的一种，指由民营公司运营的铁路，如关西的阪急电车。</li></ul>" }
   },
   {
-    id: "jp_l1_q5_light_dumbbell_spelling",
+    id: "jp_transport_l1_q5_shitetsu_spelling",
     type: "spelling",
     section: "第1关 · 拼写 · 题5",
-    image: IMG.jpGymLightDumbbell,
-    fullPhrase: "軽いダンベル",
-    translation: "轻重量哑铃",
+    image: IMG.jpTransportPrivateRailway,
+    fullPhrase: "私鉄",
+    translation: "私营铁路",
     gloss: V10_GLOSS,
-    lookupUnits: ["軽い", "ダンベル"],
-    chunks: ["軽い", "ダンベル"],
-    options: ["軽い", "ダンベル"]
+    lookupUnits: ["私鉄"],
+    chunks: ["私", "鉄"],
+    options: ["私", "鉄"]
   },
   {
-    id: "jp_l1_q6_heavy_dumbbell_spelling",
+    id: "jp_transport_l1_q6_board_private_railway",
     type: "spelling",
     section: "第1关 · 拼写 · 题6",
-    image: IMG.jpGymHeavyDumbbell,
-    fullPhrase: "重いダンベル",
-    translation: "重一点的哑铃",
+    image: IMG.jpTransportBoardPrivateRailway,
+    fullPhrase: "私鉄に乗ります",
+    translation: "乘坐私营铁路",
     gloss: V10_GLOSS,
-    lookupUnits: ["重い", "ダンベル"],
-    chunks: ["重い", "ダンベル"],
-    options: ["重い", "ダンベル"]
+    lookupUnits: ["私鉄", "に乗ります"],
+    chunks: ["私鉄", "に乗ります"],
+    options: ["私鉄", "に乗ります"]
   },
   {
-    id: "jp_l1_q7_bench_meaning",
+    id: "jp_transport_l1_q7_shinkansen_meaning",
     type: "contextMeaning",
     section: "第1关 · 词义 · 题7",
-    phrase: "ベンチ",
-    image: IMG.jpGymBenchMeaning,
-    sentence: "このベンチは空いていますか。",
-    options: ["长椅", "训练凳"],
-    correct: "训练凳",
-    analysis: "<strong>ベンチ</strong> 在健身房场景里表示“训练凳”。<br><br>句意：这个训练凳空着吗？"
+    phrase: "新幹線",
+    image: IMG.jpTransportShinkansen,
+    sentence: "新幹線",
+    options: ["新干线", "出租车"],
+    correct: "新干线",
+    explanation: { html: "<ul style=\"margin:0;padding-left:20px;\"><li><strong>新幹線（shinkansen）</strong>是日本的高速铁路，能快速连接日本的主要城市。</li></ul>" }
   },
   {
-    id: "jp_l1_q8_flat_bench_spelling",
+    id: "jp_transport_l1_q8_shinkansen_spelling",
     type: "spelling",
     section: "第1关 · 拼写 · 题8",
-    image: IMG.jpGymFlatBench,
-    fullPhrase: "フラットベンチ",
-    translation: "平板训练凳",
+    image: IMG.jpTransportShinkansen,
+    fullPhrase: "新幹線",
+    translation: "新干线",
     gloss: V10_GLOSS,
-    lookupUnits: ["フラット", "ベンチ"],
-    chunks: ["フラット", "ベンチ"],
-    options: ["フラット", "ベンチ"]
+    lookupUnits: ["新幹線"],
+    chunks: ["新幹", "線"],
+    options: ["新幹", "線"]
   },
   {
-    id: "jp_l1_q9_incline_bench_spelling",
+    id: "jp_transport_l1_q9_board_shinkansen",
     type: "spelling",
     section: "第1关 · 拼写 · 题9",
-    image: IMG.jpGymInclineBench,
-    fullPhrase: "インクラインベンチ",
-    translation: "上斜训练凳",
+    image: IMG.jpTransportBoardShinkansen,
+    fullPhrase: "新幹線に乗ります",
+    translation: "乘坐新干线",
     gloss: V10_GLOSS,
-    lookupUnits: ["インクライン", "ベンチ"],
-    chunks: ["インクライン", "ベンチ"],
-    options: ["インクライン", "ベンチ"]
+    lookupUnits: ["新幹線", "に乗ります"],
+    chunks: ["新幹線", "に乗ります"],
+    options: ["新幹線", "に乗ります"]
   },
   {
-    id: "jp_l1_q10_large_plate_builder",
+    id: "jp_transport_l1_q10_ginza_sentence",
     type: "twoOption",
     section: "第1关 · 逐块组句 · 题10",
-    prompt: "有大号杠铃片吗？",
-    promptSegments: topicLookupSegments(["有", "大号杠铃片", "吗"], ["あります", "大きいプレート", "か"], { 2: "？" }),
-    fullSentence: "大きいプレートはありますか。",
+    prompt: "去银座，要搭乘地铁。",
+    promptSegments: topicLookupSegments(["去银座", "要搭乘地铁"], ["銀座へは", "地下鉄に乗ります"], { 0: "，", 1: "。" }),
+    fullSentence: "銀座へは地下鉄に乗ります。",
     gloss: V10_GLOSS,
-    lookupUnits: ["大きい", "プレート", "は", "あります", "か"],
+    lookupUnits: ["銀座", "へは", "地下鉄に乗ります"],
     groups: [
-      { zh: "大的", options: ["大きい", "朝"], correct: "大きい" },
-      { zh: "杠铃片", options: ["プレート", "を"], correct: "プレート" },
-      { zh: "提示主题", options: ["は", "戻し"], correct: "は" },
-      { zh: "有", options: ["あります", "てください"], correct: "あります" },
-      { zh: "表示疑问", options: ["か", "置か"], correct: "か" }
-    ]
+      { zh: "银座", options: ["銀座", "新幹線"], correct: "銀座" },
+      { zh: "（助词）", options: ["へは", "私鉄"], correct: "へは" },
+      { zh: "乘坐地铁", options: ["地下鉄に乗ります", "私鉄"], correct: "地下鉄に乗ります" }
+    ],
+    explanation: { html: "<ul style=\"margin:0;padding-left:20px;\"><li style=\"margin-bottom:8px;\"><strong class=\"spec-explanation-orange\">へ</strong>（e）放在目的地后面，表示“去……”。</li><li style=\"margin-bottom:8px;\"><strong class=\"spec-explanation-orange\">は</strong>（wa）把前面的内容作为话题。</li><li><strong class=\"spec-explanation-orange\">目的地</strong>＋<strong class=\"spec-explanation-orange\">へは</strong>可以理解为“去……的话”。</li></ul>" }
   },
   {
-    id: "jp_l1_q11_light_dumbbell_builder",
+    id: "jp_transport_l1_q11_yokohama_sentence",
     type: "twoOption",
     section: "第1关 · 逐块组句 · 题11",
-    prompt: "有轻一点的哑铃吗？",
-    promptSegments: topicLookupSegments(["有", "轻一点的哑铃", "吗"], ["あります", "軽いダンベル", "か"], { 2: "？" }),
-    fullSentence: "軽いダンベルはありますか。",
+    prompt: "去横滨，要搭乘私营铁路。",
+    promptSegments: topicLookupSegments(["去横滨", "要搭乘私营铁路"], ["横浜へは", "私鉄に乗ります"], { 0: "，", 1: "。" }),
+    fullSentence: "横浜へは私鉄に乗ります。",
     gloss: V10_GLOSS,
-    lookupUnits: ["軽い", "ダンベル", "は", "あります", "か"],
+    lookupUnits: ["横浜", "へは", "私鉄に乗ります"],
     groups: [
-      { zh: "轻的", options: ["シート", "軽い"], correct: "軽い" },
-      { zh: "哑铃", options: ["物", "ダンベル"], correct: "ダンベル" },
-      { zh: "提示主题", options: ["は", "を"], correct: "は" },
-      { zh: "有", options: ["あります", "置か"], correct: "あります" },
-      { zh: "表示疑问", options: ["か", "高さ"], correct: "か" }
+      { zh: "横滨", options: ["横浜", "新幹線"], correct: "横浜" },
+      { zh: "（助词）", options: ["へは", "私鉄"], correct: "へは" },
+      { zh: "乘坐私营铁路", options: ["私鉄に乗ります", "地下鉄"], correct: "私鉄に乗ります" }
     ]
   },
   {
-    id: "jp_l1_q12_flat_bench_builder",
+    id: "jp_transport_l1_q12_kyoto_sentence",
     type: "twoOption",
     section: "第1关 · 逐块组句 · 题12",
-    prompt: "平板训练凳空着吗？",
-    promptSegments: topicLookupSegments(["平板训练凳", "空着", "吗"], ["フラットベンチ", "空いています", "か"], { 2: "？" }),
-    fullSentence: "フラットベンチは空いていますか。",
+    prompt: "去京都，要搭乘新干线。",
+    promptSegments: topicLookupSegments(["去京都", "要搭乘新干线"], ["京都へは", "新幹線に乗ります"], { 0: "，", 1: "。" }),
+    fullSentence: "京都へは新幹線に乗ります。",
     gloss: V10_GLOSS,
-    lookupUnits: ["フラットベンチ", "は", "空いています", "か"],
+    lookupUnits: ["京都", "へは", "新幹線に乗ります"],
     groups: [
-      { zh: "平板训练凳", options: ["ゆっくり", "フラットベンチ"], correct: "フラットベンチ" },
-      { zh: "提示主题", options: ["置か", "は"], correct: "は" },
-      { zh: "空着", options: ["空いています", "置か"], correct: "空いています" },
-      { zh: "表示疑问", options: ["か", "高さ"], correct: "か" }
+      { zh: "京都", options: ["京都", "私鉄"], correct: "京都" },
+      { zh: "（助词）", options: ["へは", "地下鉄"], correct: "へは" },
+      { zh: "乘坐新干线", options: ["新幹線に乗ります", "地下鉄"], correct: "新幹線に乗ります" }
     ]
   },
-  regular9876OralStep(
-    "jp_l1_q13_oral_small_plate",
-    "第1关 · 口翻 · 题13",
-    topicLookupSegments(["有", "小号杠铃片", "吗"], ["あります", "小さいプレート", "か"], { 2: "？" }),
-    "小さいプレートはありますか。",
-    [{ zh: "", answer: "小さい" }, { zh: "", answer: "プレート" }, { zh: "", answer: "は" }, { zh: "", answer: "あります" }, { zh: "", answer: "か" }],
-    ["は", "あります", "プレート", "か", "小さい"]
+  regular9876FollowStep(
+    "jp_transport_l1_q13_follow_kyoto",
+    "第1关 · 跟读 · 题13",
+    topicLookupSegments(["去京都", "要搭乘新干线"], ["京都へは", "新幹線に乗ります"], { 0: "，", 1: "。" }),
+    "京都へは新幹線に乗ります。",
+    [{ zh: "京都", answer: "京都" }, { zh: "（助词）", answer: "へは" }, { zh: "乘坐新干线", answer: "新幹線に乗ります" }],
+    ["新幹線に乗ります", "へは", "京都"]
   ),
-  regular9876OralStep(
-    "jp_l1_q14_oral_heavy_dumbbell",
-    "第1关 · 口翻 · 题14",
-    topicLookupSegments(["有", "重一点的哑铃", "吗"], ["あります", "重いダンベル", "か"], { 2: "？" }),
-    "重いダンベルはありますか。",
-    [{ zh: "", answer: "重い" }, { zh: "", answer: "ダンベル" }, { zh: "", answer: "は" }, { zh: "", answer: "あります" }, { zh: "", answer: "か" }],
-    ["あります", "は", "ダンベル", "重い", "か"]
+  regular9876FollowStep(
+    "jp_transport_l1_q14_follow_yokohama",
+    "第1关 · 跟读 · 题14",
+    topicLookupSegments(["去横滨", "要搭乘私营铁路"], ["横浜へは", "私鉄に乗ります"], { 0: "，", 1: "。" }),
+    "横浜へは私鉄に乗ります。",
+    [{ zh: "横滨", answer: "横浜" }, { zh: "（助词）", answer: "へは" }, { zh: "乘坐私营铁路", answer: "私鉄に乗ります" }],
+    ["へは", "私鉄に乗ります", "横浜"]
   ),
-  regular9876OralStep(
-    "jp_l1_q15_oral_incline_bench",
-    "第1关 · 口翻 · 题15",
-    topicLookupSegments(["上斜训练凳", "空着", "吗"], ["インクラインベンチ", "空いています", "か"], { 2: "？" }),
-    "インクラインベンチは空いていますか。",
-    [{ zh: "", answer: "インクラインベンチ" }, { zh: "", answer: "は" }, { zh: "", answer: "空いています" }, { zh: "", answer: "か" }],
-    ["は", "か", "空いています", "インクラインベンチ"]
+  regular9876FollowStep(
+    "jp_transport_l1_q15_follow_ginza",
+    "第1关 · 跟读 · 题15",
+    topicLookupSegments(["去银座", "要搭乘地铁"], ["銀座へは", "地下鉄に乗ります"], { 0: "，", 1: "。" }),
+    "銀座へは地下鉄に乗ります。",
+    [{ zh: "银座", answer: "銀座" }, { zh: "（助词）", answer: "へは" }, { zh: "乘坐地铁", answer: "地下鉄に乗ります" }],
+    ["地下鉄に乗ります", "銀座", "へは"]
   )
 ];
 
@@ -12608,7 +13231,7 @@ const COURSE_V10_LEVEL_2 = [
   ),
   ...V11_LEVEL2_CORE.map((item, index) => conditionTwoOptionStep({
     ...item,
-    explanation: { tab: "语法词汇讲解", html: V11_WILL_EXPLANATION_HTML },
+    explanation: { tab: "句子语法讲解", html: V11_WILL_EXPLANATION_HTML },
     grammarText: V11_GRAMMAR_CARD_WILL,
     id: `l2_q${index + 2}_condition_${item.key}`,
     section: `第2关 · 聚焦拼句子 · 题${index + 2}`
@@ -12832,7 +13455,7 @@ const COURSE_V10_LEVEL_4 = [
   ),
   ...V11_LEVEL4_CORE.map((item, index) => conditionTwoOptionStep({
     ...item,
-    explanation: { tab: "语法词汇讲解", html: V11_CAN_MAY_EXPLANATION_HTML },
+    explanation: { tab: "句子语法讲解", html: V11_CAN_MAY_EXPLANATION_HTML },
     grammarText: V11_GRAMMAR_CARD_CAN_MAY,
     id: `l4_q${index + 2}_condition_${item.key}`,
     section: `第4关 · 聚焦拼句子 · 题${index + 2}`
