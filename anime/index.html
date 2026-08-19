@@ -7305,6 +7305,11 @@ const JP_AUDIO_KEYS = {
   "物": "jp-mono",
   "ゆっくり": "jp-yukkuri"
 };
+const JP_AAC_AUDIO_KEYS = new Set([
+  "炭治郎は人気の主人公です。",
+  "千尋は有名なヒロインです。",
+  "フリーザは強い悪役です。"
+]);
 function _specJPDisplayHTML(text, mode = 'ruby') {
   const label = String(text ?? '');
   const reading = JP_ROMAJI[label];
@@ -7369,13 +7374,14 @@ function _specSpeakFallbackOnce(audio, text, slow = false) {
   _specSpeakFallback(text, slow);
 }
 function _audioPath(text, slow = false, ext = null) {
-  const resolvedExt = ext || (JP_AUDIO_KEYS[String(text)] ? 'wav' : 'm4a');
+  const resolvedExt = ext || (JP_AAC_AUDIO_KEYS.has(String(text)) ? 'm4a' : JP_AUDIO_KEYS[String(text)] ? 'wav' : 'm4a');
   return `assets/audio/${slow ? 'slow' : 'normal'}/${_specSlug(text)}.${resolvedExt}`;
 }
 function _audioFallbackPath(text, slow = false) {
   return _audioPath(text, slow, 'mp3');
 }
 function _audioCandidatePaths(text, slow = false) {
+  if (JP_AAC_AUDIO_KEYS.has(String(text))) return [_audioPath(text, slow, 'm4a'), _audioPath(text, slow, 'wav'), _audioFallbackPath(text, slow)];
   if (JP_AUDIO_KEYS[String(text)]) return [_audioPath(text, slow, 'wav'), _audioPath(text, slow, 'm4a'), _audioFallbackPath(text, slow)];
   return [_audioPath(text, slow, 'm4a'), _audioFallbackPath(text, slow)];
 }
