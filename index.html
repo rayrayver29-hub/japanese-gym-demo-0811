@@ -6685,7 +6685,7 @@ const SPEC_ASSETS = {
   dialogueAvatarB: ASSETS.avatarB
 };
 const V10_UNLOCK_KEY = 'jp-transport-demo-v1-unlocked-level';
-const state = { version: null, steps: [], index: 0, activeAudio: null, listeningSkipFromIndex: null, completedSteps: new Set(), unlockedLevel: 1, devPreview: false, boardResizeStates: new Map() };
+const state = { version: null, steps: [], index: 0, activeAudio: null, listeningSkipFromIndex: null, oralFallbackActive: false, completedSteps: new Set(), unlockedLevel: 1, devPreview: false, boardResizeStates: new Map() };
 state.score = { correct: 0, total: 0, seen: new Set() };
 let _specActiveAudio = null;
 let _specAudioEpoch = 0;
@@ -7319,16 +7319,34 @@ function _specSpeakFallbackOnce(audio, text, slow = false) {
   audio._specFallbackSpoken = true;
   _specSpeakFallback(text, slow);
 }
+const JP_FOLLOW_READING_AUDIO_TEXTS = new Set([
+  "京都へは新幹線に乗ります。",
+  "横浜へは私鉄に乗ります。",
+  "銀座へは地下鉄に乗ります。"
+]);
+const _specPreloadedFollowAudio = new Map();
 function _audioPath(text, slow = false, ext = null) {
-  const resolvedExt = ext || (JP_AUDIO_KEYS[String(text)] ? 'wav' : 'm4a');
+  const audioText = String(text);
+  const resolvedExt = ext || (JP_FOLLOW_READING_AUDIO_TEXTS.has(audioText) ? 'm4a' : JP_AUDIO_KEYS[audioText] ? 'wav' : 'm4a');
   return `assets/audio/${slow ? 'slow' : 'normal'}/${_specSlug(text)}.${resolvedExt}`;
 }
 function _audioFallbackPath(text, slow = false) {
   return _audioPath(text, slow, 'mp3');
 }
 function _audioCandidatePaths(text, slow = false) {
+  if (JP_FOLLOW_READING_AUDIO_TEXTS.has(String(text))) return [_audioPath(text, slow, 'm4a'), _audioPath(text, slow, 'wav'), _audioFallbackPath(text, slow)];
   if (JP_AUDIO_KEYS[String(text)]) return [_audioPath(text, slow, 'wav'), _audioPath(text, slow, 'm4a'), _audioFallbackPath(text, slow)];
   return [_audioPath(text, slow, 'm4a'), _audioFallbackPath(text, slow)];
+}
+function _specPreloadFollowReadingAudio() {
+  JP_FOLLOW_READING_AUDIO_TEXTS.forEach(text => {
+    const path = _audioCandidatePaths(text, false)[0];
+    if (_specPreloadedFollowAudio.has(path)) return;
+    const audio = new Audio(path);
+    audio.preload = 'auto';
+    audio.load();
+    _specPreloadedFollowAudio.set(path, audio);
+  });
 }
 function _specAttachAudioCandidates(audio, text, slow = false) {
   audio._specAudioCandidates = _audioCandidatePaths(text, slow);
@@ -8155,6 +8173,7 @@ function showEntry() {
   _specStopAllAudio();
   state.version = null; state.steps = []; state.index = 0;
   state.listeningSkipFromIndex = null;
+  state.oralFallbackActive = false;
   state.completedSteps = new Set();
   state.boardResizeStates = new Map();
   resetScore();
@@ -8178,12 +8197,14 @@ function startCourse(version) {
   state.steps = buildSteps(version).map((item, index) => ({...item, id: `step-${index + 1}`}));
   state.index = 0;
   state.listeningSkipFromIndex = null;
+  state.oralFallbackActive = false;
   state.completedSteps = new Set();
   state.boardResizeStates = new Map();
   resetScore();
   document.getElementById('entryView').classList.add('hidden');
   document.getElementById('courseView').classList.remove('hidden');
   updateDemoScale();
+  _specPreloadFollowReadingAudio();
   renderCurrentStep();
 }
 function renderCurrentStep() {
@@ -9465,7 +9486,7 @@ function renderOralTranslation(container, data) {
   render();
 }
 function renderRegular9876Oral(container, data) {
-  let mode = data.startMode || 'record';
+  let mode = data.startMode || (data.followReading && state.oralFallbackActive ? 'select' : 'record');
   let recordState = 'idle';
   let entryAutoPlayed = false;
   let optionItems = buildOptionItems();
@@ -9673,6 +9694,7 @@ function renderRegular9876Oral(container, data) {
       if (action === 'defer') {
         _specStopAllAudio();
         recordAttempt(data, false);
+        if (data.followReading) state.oralFallbackActive = true;
         mode = 'select';
         recordState = 'idle';
         render();
