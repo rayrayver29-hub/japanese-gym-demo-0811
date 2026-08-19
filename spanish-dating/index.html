@@ -8329,6 +8329,7 @@ function renderContextMeaning(container, data) {
 }
 function renderSpelling(container, data) {
   let current = 0;
+  const isPhraseExercise = /\s/.test(String(data.fullPhrase || '').trim());
   const slotStates = data.chunks.map(() => null);
   const optionItems = _shuffleNotSame(data.options.map((label,index) => ({label,index})), item => item.label);
   const used = new Set();
@@ -8344,11 +8345,11 @@ function renderSpelling(container, data) {
     _specShell(container, { exerciseId: data.id, progress: stepProgress(), showContinue: done, sceneHTML: imageScene({ ...data, sentence: data.fullPhrase }, _specEscape(data.translation), 'demo-vocab-card'), bodyHTML: `<div class="spec-main-stack"><p class="spec-stem">请翻译：</p>${done ? `${_specCompleteSentenceHTML(data.fullPhrase, data.gloss || {}, true, data.lookupUnits || [])}${_specSpeechExplanationHTML(data.explanation, data.fullPhrase)}` : slotHTML}${allFilled ? '' : `<div class="spec-option-pool">${poolHTML}</div>`}</div>` });
     if (!initialFullPlayed) {
       initialFullPlayed = true;
-      _playSoon(data.fullPhrase, 420);
+      _playSoon(data.fullPhrase, isPhraseExercise ? 220 : 420);
     }
     if (done && !fullPlayed) {
       fullPlayed = true;
-      _playSoon(data.fullPhrase, 300);
+      _playSoon(data.fullPhrase, isPhraseExercise ? 220 : 300);
     }
     if (!allFilled) container.querySelectorAll('.spec-pill').forEach(btn => btn.addEventListener('click', () => {
       const i = Number(btn.dataset.index);
