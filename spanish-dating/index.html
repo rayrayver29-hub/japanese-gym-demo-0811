@@ -7395,9 +7395,15 @@ function _specSpeakFallbackOnce(audio, text, slow = false) {
   audio._specFallbackSpoken = true;
   _specSpeakFallback(text, slow);
 }
+const ES_DATING_MEDIA_VERSION = '20260819-2';
+function _specVersionedAssetPath(src) {
+  const raw = String(src || '');
+  if (!raw.includes('/es-date-') && !raw.includes('/es-dating-invitation-level1/')) return raw;
+  return `${raw}${raw.includes('?') ? '&' : '?'}v=${ES_DATING_MEDIA_VERSION}`;
+}
 function _audioPath(text, slow = false, ext = null) {
   const resolvedExt = ext || (JP_AUDIO_KEYS[String(text)] ? 'wav' : 'm4a');
-  return `assets/audio/${slow ? 'slow' : 'normal'}/${_specSlug(text)}.${resolvedExt}`;
+  return _specVersionedAssetPath(`assets/audio/${slow ? 'slow' : 'normal'}/${_specSlug(text)}.${resolvedExt}`);
 }
 function _audioFallbackPath(text, slow = false) {
   return _audioPath(text, slow, 'mp3');
@@ -7510,8 +7516,9 @@ function _specPreferredImagePath(src) {
 function _specImageHTML(src, alt = '', extraAttrs = '') {
   const raw = String(src || '');
   const preferred = _specPreferredImagePath(raw);
-  const fallbackAttr = preferred !== raw ? ` data-fallback-src="${_specEscape(raw)}"` : '';
-  return `<img src="${_specEscape(preferred)}" alt="${_specEscape(alt)}"${fallbackAttr} decoding="sync" loading="eager" fetchpriority="high" onerror="if(this.dataset.fallbackSrc&&this.src.indexOf(this.dataset.fallbackSrc)<0){this.src=this.dataset.fallbackSrc;this.removeAttribute('data-fallback-src');}else{this.remove();}" ${extraAttrs}>`;
+  const requestSrc = _specVersionedAssetPath(preferred);
+  const fallbackAttr = preferred !== raw ? ` data-fallback-src="${_specEscape(_specVersionedAssetPath(raw))}"` : '';
+  return `<img src="${_specEscape(requestSrc)}" alt="${_specEscape(alt)}"${fallbackAttr} decoding="sync" loading="eager" fetchpriority="high" onerror="if(this.dataset.fallbackSrc&&this.src.indexOf(this.dataset.fallbackSrc)<0){this.src=this.dataset.fallbackSrc;this.removeAttribute('data-fallback-src');}else{this.remove();}" ${extraAttrs}>`;
 }
 function _specChoice2HTML(label, index, state = '') {
   return `<button class="spec-choice2 ${state}" type="button" data-index="${index}">${_specJPDisplayHTML(label, 'label')}</button>`;
