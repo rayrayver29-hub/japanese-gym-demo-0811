@@ -7015,6 +7015,8 @@ function _specEscape(value) {
 const JP_ROMAJI = {
   "主人公": "shujinkō",
   "主人": "shujin",
+  "主": "shu",
+  "人": "jin",
   "公": "kō",
   "人気の": "ninki no",
   "人気の主人公": "ninki no shujinkō",
@@ -7022,6 +7024,10 @@ const JP_ROMAJI = {
   "ヒロイン": "hiroin",
   "ヒロ": "hiro",
   "イン": "in",
+  "ヒ": "hi",
+  "ロ": "ro",
+  "イ": "i",
+  "ン": "n",
   "有名な": "yūmei na",
   "有名なヒロイン": "yūmei na hiroin",
   "有名なヒロインです": "yūmei na hiroin desu",
@@ -7157,6 +7163,8 @@ const JP_ROMAJI = {
 const JP_AUDIO_KEYS = {
   "主人公": "jp-anime-shujinko",
   "主人": "jp-anime-shujin",
+  "主": "jp-anime-shu",
+  "人": "jp-anime-jin",
   "公": "jp-anime-ko",
   "人気の": "jp-anime-ninki-no",
   "人気の主人公": "jp-anime-ninki-no-shujinko",
@@ -7164,6 +7172,10 @@ const JP_AUDIO_KEYS = {
   "ヒロイン": "jp-anime-hiroin",
   "ヒロ": "jp-anime-hiro",
   "イン": "jp-anime-in",
+  "ヒ": "jp-anime-hi",
+  "ロ": "jp-anime-ro",
+  "イ": "jp-anime-i",
+  "ン": "jp-anime-n",
   "有名な": "jp-anime-yumei-na",
   "有名なヒロイン": "jp-anime-yumei-na-hiroin",
   "有名なヒロインです": "jp-anime-yumei-na-hiroin-desu",
@@ -12554,12 +12566,18 @@ const V10_GLOSS = {
 Object.assign(V10_GLOSS, {
   "主人公": "主人公；主角",
   "主人": "主人（用于主人公）",
+  "主": "主（用于主人公）",
+  "人": "人（用于主人公）",
   "公": "公（用于主人公）",
   "人気の": "有人气的；受欢迎的",
   "人気の主人公": "人气主角",
   "ヒロイン": "女主角；女主人公",
   "ヒロ": "女主角（用于ヒロイン）",
   "イン": "女主角（用于ヒロイン）",
+  "ヒ": "ヒ（用于ヒロイン）",
+  "ロ": "ロ（用于ヒロイン）",
+  "イ": "イ（用于ヒロイン）",
+  "ン": "ン（用于ヒロイン）",
   "有名な": "有名的；著名的",
   "有名なヒロイン": "著名女主角",
   "悪役": "反派",
@@ -13338,8 +13356,8 @@ const COURSE_ANIME_LEVEL_1 = [
     translation: "主人公；主角",
     gloss: V10_GLOSS,
     lookupUnits: ["主人公"],
-    chunks: ["主人", "公"],
-    options: ["主人", "公"]
+    chunks: ["主", "人", "公"],
+    options: ["主", "人", "公"]
   },
   {
     id: "jp_anime_l1_q3_popular_protagonist",
@@ -13374,8 +13392,8 @@ const COURSE_ANIME_LEVEL_1 = [
     translation: "女主角；女主人公",
     gloss: V10_GLOSS,
     lookupUnits: ["ヒロイン"],
-    chunks: ["ヒロ", "イン"],
-    options: ["ヒロ", "イン"]
+    chunks: ["ヒ", "ロ", "イ", "ン"],
+    options: ["ヒ", "ロ", "イ", "ン"]
   },
   {
     id: "jp_anime_l1_q6_famous_heroine",
