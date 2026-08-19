@@ -7504,14 +7504,14 @@ function _specAudioHTML(text, includeSlow = true) {
 }
 function _specPreferredImagePath(src) {
   const raw = String(src || '');
-  if (raw.includes('/jp-gym-level1/')) return raw;
+  if (raw.includes('/jp-gym-level1/') || raw.includes('/es-dating-invitation-level1/')) return raw;
   return raw.replace(/\.(png|jpg|jpeg)$/i, '.webp');
 }
 function _specImageHTML(src, alt = '', extraAttrs = '') {
   const raw = String(src || '');
   const preferred = _specPreferredImagePath(raw);
   const fallbackAttr = preferred !== raw ? ` data-fallback-src="${_specEscape(raw)}"` : '';
-  return `<img src="${_specEscape(preferred)}" alt="${_specEscape(alt)}"${fallbackAttr} onerror="if(this.dataset.fallbackSrc&&this.src.indexOf(this.dataset.fallbackSrc)<0){this.src=this.dataset.fallbackSrc;this.removeAttribute('data-fallback-src');}else{this.remove();}" ${extraAttrs}>`;
+  return `<img src="${_specEscape(preferred)}" alt="${_specEscape(alt)}"${fallbackAttr} decoding="sync" loading="eager" fetchpriority="high" onerror="if(this.dataset.fallbackSrc&&this.src.indexOf(this.dataset.fallbackSrc)<0){this.src=this.dataset.fallbackSrc;this.removeAttribute('data-fallback-src');}else{this.remove();}" ${extraAttrs}>`;
 }
 function _specChoice2HTML(label, index, state = '') {
   return `<button class="spec-choice2 ${state}" type="button" data-index="${index}">${_specJPDisplayHTML(label, 'label')}</button>`;
